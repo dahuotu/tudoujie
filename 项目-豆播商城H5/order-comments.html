@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>评价晒图</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" v-on:click="linkBack"></div>
+				评价晒图
+			</header>
+			<div class="detail">
+				<div class="panel comments order-comments">
+					<div class="panel-list">
+						<ul>
+							<template v-for="item in commentsList">
+								<li>
+									<div class="face">
+										<img v-bind:src="item.face" class="img-responsive round">
+									</div>
+									<div class="comments-content">
+										<div class="nickname">
+											<div class="name">{{item.name}}</div>
+											<div class="date">{{item.time}}</div>
+										</div>
+										<div class="content">{{item.content}}</div>
+										<div class="imglist">
+											<template v-for="img in item.imglist">
+												<div class="li"><img v-bind:src="img.img"></div>
+											</template>
+										</div>
+										<div class="product">{{item.product}}</div>
+										<div class="reply" v-if="item.reply!=''">
+											<h2>客服：</h2>
+											<div class="reply-content">
+												{{item.reply}}
+											</div>
+										</div>
+									</div>
+								</li>
+							</template>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+			app.getCommentsList();
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				"commentsList": "",
+			},
+			methods: {
+				getCommentsList: function() {
+					$.ajax({
+						type: 'Get',
+						url: "json/getCommentsList.json",
+						dataType: "json",
+						beforeSend: function() {},
+						success: function(res) {
+							app.commentsList = res.data;
+						}
+					});
+				},
+				linkBack:function(){
+					history.back();
+				},
+			},
+		});
+	</script>
+
+</html>

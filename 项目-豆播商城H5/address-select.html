@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>商品详情-收货地址</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" onclick="history.back()"></div>
+				收货地址
+			</header>
+			<div class="address">
+				<div class="address-list">
+					<ul>
+						<li>
+							<div class="checked-ch"></div>
+							<div class="address-info">
+								<div class="name">
+									<div class="zh-name">张女士</div>
+									<div class="mobile">158****6266</div>
+								</div>
+								<div class="info">
+									<span class="def">默认</span>&nbsp;<span class="green">公司</span> 广东省深圳市南山后海软件产业基地5栋 A座528室
+								</div>
+							</div>
+							<div class="edit">
+							</div>
+							<div class="set hide">设为默认</div>
+							<div class="del hide">删除</div>
+						</li>
+						<li>
+							<div class="checked"></div>
+							<div class="address-info">
+								<div class="name">
+									<div class="zh-name">张女士</div>
+									<div class="mobile">158****6266</div>
+								</div>
+								<div class="info">
+									<span class="green">家</span> 广东省深圳市南山后海软件产业基地5栋 A座528室
+								</div>
+							</div>
+							<div class="edit">
+							</div>
+							<div class="set hide">设为默认</div>
+							<div class="del hide">删除</div>
+						</li>
+						<li class="active">
+							<div class="checked"></div>
+							<div class="address-info">
+								<div class="name">
+									<div class="zh-name">张女士</div>
+									<div class="mobile">158****6266</div>
+								</div>
+								<div class="info">
+									广东省深圳市南山后海软件产业基地5栋 A座528室
+								</div>
+							</div>
+							<div class="edit">
+							</div>
+							<div class="set">设为默认</div>
+							<div class="del">删除</div>
+						</li>
+					</ul>
+				</div>
+				<div class="foot-button">
+					<div class="btn-add">添加收货地址</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+
+			},
+			methods: {
+
+			}
+		});
+	</script>
+
+</html>

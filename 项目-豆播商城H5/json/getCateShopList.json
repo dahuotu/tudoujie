@@ -1,0 +1,44 @@
+{
+	"msg": "success",
+	"data": [{
+			"malMobilePrice": 4600.00,
+			"sellerId": 1,
+			"virtualSales": 1,
+			"productStock": 999,
+			"masterImg": "https://testresourceejavashop.tudouni.doubozhibo.com/ejsimage/images/seller/1/3ea251f2-3115-40c2-a579-f744281fbcd8.jpg",
+			"id": 7,
+			"name1": "联想 Y430p 14.0英寸游戏本【i5-4210M 4G 1T GTX850M 2G独显）",
+			"actualSales": 1
+		}, {
+			"malMobilePrice": 4600.00,
+			"sellerId": 1,
+			"virtualSales": 1,
+			"productStock": 999,
+			"masterImg": "https://testresourceejavashop.tudouni.doubozhibo.com/ejsimage/images/seller/1/3ea251f2-3115-40c2-a579-f744281fbcd8.jpg",
+			"id": 7,
+			"name1": "联想 Y430p 14.0英寸游戏本【i5-4210M 4G 1T GTX850M 2G独显）",
+			"actualSales": 1
+		},
+		{
+			"malMobilePrice": 4600.00,
+			"sellerId": 1,
+			"virtualSales": 1,
+			"productStock": 999,
+			"masterImg": "https://testresourceejavashop.tudouni.doubozhibo.com/ejsimage/images/seller/1/3ea251f2-3115-40c2-a579-f744281fbcd8.jpg",
+			"id": 7,
+			"name1": "联想 Y430p 14.0英寸游戏本【i5-4210M 4G 1T GTX850M 2G独显）",
+			"actualSales": 1
+		},
+		{
+			"malMobilePrice": 4600.00,
+			"sellerId": 1,
+			"virtualSales": 1,
+			"productStock": 999,
+			"masterImg": "https://testresourceejavashop.tudouni.doubozhibo.com/ejsimage/images/seller/1/3ea251f2-3115-40c2-a579-f744281fbcd8.jpg",
+			"id": 7,
+			"name1": "联想 Y430p 14.0英寸游戏本【i5-4210M 4G 1T GTX850M 2G独显）",
+			"actualSales": 1
+		}
+	],
+	"code": "0"
+}

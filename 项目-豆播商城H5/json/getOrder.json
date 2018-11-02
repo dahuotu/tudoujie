@@ -1,0 +1,29 @@
+{
+	"msg": "success",
+	"data": [{
+		"addressid": "1",
+		"shopid": "1",
+		"shopname": "Linda的第一店舖",
+		"face": "upload/t01d7de9ec9fd9ce918.png",
+		"orderlist": [{
+			"pid": "1",
+			"title": "顺丰包邮荔枝 海南三亚妃子笑荔枝 新鲜...",
+			"pic":"upload/1.jpg",
+			"product": "妃子笑500g",
+			"price": "79.8",
+			"num": "1"
+		}, {
+			"pid": "1",
+			"title": "顺丰包邮荔枝 海南三亚妃子笑荔枝 新鲜...",
+			"pic":"upload/1.jpg",
+			"product": "妃子笑500g",
+			"price": "79.8",
+			"num": "1"
+		}],
+		"postage": "包邮",
+		"remark": "填写内容已和卖家协商确认",
+		"ordernum": "2",
+		"ordermoney": "150"
+	}],
+	"code": "0"
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>订单详情-待发货</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" v-on:click="linkBack"></div>
+				订单详情
+			</header>
+			<div class="order">
+				<div class="orderDetail-panel padding">
+					<div class="state">
+						<div class="icon">
+							<div class="icon-truckc"></div>
+						</div>
+						<div class="order-info">
+							<div class="info">
+								<div class="msg28c">等待卖家发货</div>
+							</div>
+						</div>
+						<div class="arrow-right"></div>
+					</div>
+					<div class="address">
+						<div class="map">
+							<div class="icon-map"></div>
+						</div>
+						<div class="info">
+							<div class="link">
+								<div class="name">张女士</div>
+								<div class="mobile">158****6266<span class="def">默认</span></div>
+							</div>
+							<div class="content">
+								广东省深圳市南山软件产业基地5栋A座528室
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel orderDetail-panel">
+					<div class="shoper">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="shoper-link">
+							联系卖家
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="title">顺丰包邮荔枝 海南三亚妃子笑荔枝新...</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+											<div class="btn-eixt">退款</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="price">
+						<ul>
+							<li>
+								<div class="form-title">
+									商品总额
+								</div>
+								<div class="form-value">
+									¥79.8
+								</div>
+							</li>
+							<li>
+								<div class="form-title">
+									运费
+								</div>
+								<div class="form-value">
+									+¥0.00
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="money">
+						<div class="form-title">
+							实付款：
+						</div>
+						<div class="form-value">
+							<span class="ft36">¥79.8</span>
+						</div>
+					</div>
+				</div>
+				<div class="panel orderDetail-panel no-line">
+					<div class="text"><span>订单编号：</span>12345678900<span class="copy">复制</span></div>
+					<div class="text"><span>创建时间：</span>2018-08-29 17:46:05</div>
+					<div class="text"><span>付款时间：</span>2018-08-29 17:46:05</div>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+
+		</style>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				linkBack: function() {
+					history.back();
+				}
+			},
+		});
+	</script>
+
+</html>

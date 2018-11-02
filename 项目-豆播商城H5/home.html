@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>店铺首页</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="http://m.ydui.org/css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+			.slider-item {
+				width: 100%;
+				height: 3.25rem;
+				-webkit-flex-shrink: 0;
+				-ms-flex-negative: 0;
+				flex-shrink: 0;
+			}
+			
+			.slider-item img {
+				width: 6.9rem;
+				height: 3rem;
+				border-radius: 0.06rem;
+			}
+			
+			.slider-pagination {
+				bottom: 0;
+				margin-top: 0.25rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app" data-item="">
+			<header class="header-transparent">
+				<div class="back-white" onclick="history.back()"></div>
+			</header>
+			<div class="home">
+				<div class="bg-img">
+					<img src="upload/bg.jpeg" class="img-responsive" />
+				</div>
+				<div class="bg-block">
+					<img src="upload/block.png" class="img-responsive" />
+				</div>
+				<div class="face">
+					<div class="face-shops">
+						<div class="title">Linda第一店铺</div>
+						<div class="shoper">店主：许多返</div>
+						<div class="state">
+							<div class="dot"></div>&nbsp;&nbsp;直播中
+						</div>
+						<div class="signature">
+							<img src="https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181014/8231966277674eb4b63b24705d1d03e6.png" class="img-responsive" />
+						</div>
+					</div>
+					<div class="face-round">
+						<img src="upload/face.jpg" class="img-responsive" />
+					</div>
+				</div>
+				<div class="banner">
+					<div class="m-slider" id="J_Slider">
+						<div class="slider-wrapper">
+							<template v-for="(data,index) in bannerImgs">
+								<div class="slider-item" :key='data.index'>
+									<a href="#">
+										<img :src="data.image" class="img-responsive" />
+									</a>
+								</div>
+							</template>
+						</div>
+						<div class="slider-pagination"></div>
+					</div>
+				</div>
+				<div id="tab-nav" class="tab">
+					<div class="tab-li"><label class="active">推荐</label></div>
+					<div class="tab-li"><label>肉类</label></div>
+					<div class="tab-li"><label>海鲜</label></div>
+					<div class="tab-li"><label>水果</label></div>
+					<div class="tab-li"><label>蔬菜</label></div>
+				</div>
+				<div class="tab-body">
+					<div class="title">火龙果</div>
+					<div class="list">
+						<ul>
+							<li onclick="location.href='detail.html'">
+								<div class="photo">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="price">¥<span>79.8</span></div>
+								<div class="title-smaill">陕西大荔甘福园直供</div>
+								<div class="title-big">陕西大荔冬枣500g10g以 上/个 枣子新鲜脆甜...</div>
+							</li>
+							<li onclick="location.href='detail.html'">
+								<div class="photo">
+									<img src="upload/2.jpg" class="img-responsive" />
+								</div>
+								<div class="price">¥<span>79.8</span></div>
+								<div class="title-smaill">陕西大荔甘福园直供</div>
+								<div class="title-big">泰国龙眼1kg 新鲜桂圆 进 口热带水果 新鲜 龙眼...</div>
+							</li>
+							<li onclick="location.href='detail.html'">
+								<div class="photo">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="price">¥<span>79.8</span></div>
+								<div class="title-smaill">陕西大荔甘福园直供</div>
+								<div class="title-big">陕西大荔冬枣500g10g以 上/个 枣子新鲜脆甜...</div>
+							</li>
+							<li onclick="location.href='detail.html'">
+								<div class="photo">
+									<img src="upload/2.jpg" class="img-responsive" />
+								</div>
+								<div class="price">¥<span>79.8</span></div>
+								<div class="title-smaill">陕西大荔甘福园直供</div>
+								<div class="title-big">泰国龙眼1kg 新鲜桂圆 进 口热带水果 新鲜 龙眼...</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<footer class="shop">
+				<div class="class">商品分类</div>
+				<div class="share">分享店铺</div>
+				<div class="customer">
+					<div class="customer-icon">
+						<div class="customer-img"></div>
+					</div>
+					<div class="customer-text">联系客服</div>
+				</div>
+			</footer>
+			<input id="hid_item" type="hidden" value="0" />
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/ydui.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			app.getBannerImg();
+
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				"storeId": "76",
+				"bannerImgs": "",
+			},
+			methods: {
+				getBannerImg: function() {
+					$.ajax({
+						type: 'get',
+						url: 'http://47.110.164.50/h5/sellerpb/queryBannersByStoreId.do',
+						data: {
+							storeId: app.storeId
+						},
+						dataType: "json",
+						success: function(res) {
+							app.bannerImgs = res.data;
+							
+							$('#J_Slider').slider({
+								speed: 200,
+								autoplay: 2000,
+								itemLength: res.data.length,
+								lazyLoad: true
+							});
+						}
+					})
+				},
+			}
+		});
+
+		/*
+		 * https://www.cnblogs.com/stoneniqiu/p/5807568.html
+		 * https://blog.csdn.net/qq_36309066/article/details/54380497
+		 * https://blog.csdn.net/feinifi/article/details/54346251
+		 */
+	</script>
+
+</html>

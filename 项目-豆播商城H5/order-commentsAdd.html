@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>评价晒图</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" v-on:click="linkBack"></div>
+				评价晒图
+			</header>
+			<div class="order-comments">
+				<div class="shoper">
+					<div class="face">
+						<img src="upload/t01d7de9ec9fd9ce918.png" class="img-responsive round" />
+					</div>
+					<div class="text">
+						评分
+					</div>
+					<div class="score">
+						<ul>
+							<li class="chk"></li>
+							<li class="chk"></li>
+							<li class="chk"></li>
+							<li class="chk"></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<div class="textarea">
+					<textarea class="" placeholder="写下您对本次购物的评价"></textarea>
+				</div>
+				<div class="upload">
+					<ul>
+						<li>
+							<img src="upload/1.jpg" class="img-responsive" />
+						</li>
+						<li>
+							<img src="upload/2.jpg" class="img-responsive" />
+						</li>
+						<li>
+							<img src="upload/3.jpg" class="img-responsive" />
+						</li>
+						<li>
+							<div class="upload-add">+</div>
+						</li>
+					</ul>
+				</div>
+				<div class="button">
+					<div class="btn-gray">提交</div>
+					<br>
+					<div class="btn-green">提交</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				linkBack: function() {
+					history.back();
+				},
+			},
+		});
+	</script>
+
+</html>

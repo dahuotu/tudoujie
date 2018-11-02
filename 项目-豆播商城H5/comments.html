@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>商品评价</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" onclick="history.back()"></div>
+				商品评价
+			</header>
+			<div class="detail">
+				<div class="panel comments">
+					<div id="tab-nav" class="tab">
+						<div class="tab-li"><label>商品</label></div>
+						<div class="tab-li"><label>实拍</label></div>
+						<div class="tab-li"><label class="active"><div class="tips">／320</div>评价</label></div>
+						<div class="tab-li"><label>详情</label></div>
+					</div>
+					<div class="score">好评96.8%</div>
+					<div class="class">
+						<ul>
+							<li class="li-active">全部(320)</li>
+							<li>最新</li>
+							<li>好评(320)</li>
+							<li>中评(0)</li>
+							<li>有图(9)</li>
+							<li>差评(0)</li>
+						</ul>
+					</div>
+					<div class="panel-list">
+						<ul>
+							<li>
+								<div class="face">
+									<img src="upload/t01d7de9ec9fd9ce918.png" class="img-responsive round">
+								</div>
+								<div class="comments-content">
+									<div class="nickname">
+										<div class="name">小鹿Lucia</div>
+										<div class="date">2018.08.30</div>
+									</div>
+									<div class="content">终于等到心心念念的荔枝啦，因为是孕妇，所以每次 少量吃几个，吃到小核的，非常开心，这次的购物很 满意，让我过了荔枝瘾。</div>
+									<div class="imglist">
+										<div class="li"><img src="upload/t014a6b56d88bc9aaa6.jpg"></div>
+										<div class="li"><img src="upload/t015775e41be0fe030e.jpg"></div>
+										<div class="li"><img src="upload/t015775e41be0fe030e.jpg"></div>
+										<div class="li"><img src="upload/t01ff7f5c1ae9c6e4c5.jpg"></div>
+									</div>
+									<div class="product">桂味1kg</div>
+								</div>
+							</li>
+							<li>
+								<div class="face">
+									<img src="upload/t01d7de9ec9fd9ce918.png" class="img-responsive round">
+								</div>
+								<div class="comments-content">
+									<div class="nickname">
+										<div class="name">小鹿Lucia</div>
+										<div class="date">2018.08.30</div>
+									</div>
+									<div class="content">终于等到心心念念的荔枝啦，因为是孕妇，所以每次 少量吃几个，吃到小核的，非常开心，这次的购物很 满意，让我过了荔枝瘾。</div>
+									<div class="product">桂味1kg</div>
+									<div class="reply">
+										<h2>客服：</h2>
+										<div class="reply-content">
+											非常好，比我在水果店里的好吃口感不错，很甜，顺丰到件快，服务也好，赞。
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {},
+		});
+	</script>
+
+</html>

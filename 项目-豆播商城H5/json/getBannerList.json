@@ -1,0 +1,15 @@
+{
+	"msg": "success",
+	"data": [{
+		"id": 1,
+		"title": "轮播1",
+		"image": "upload/banner.jpg",
+		"linkUrl": "http://192.168.1.134:8808"
+	}, {
+		"id": 2,
+		"title": "轮播2",
+		"image": "upload/banner.jpg",
+		"linkUrl": "http://192.168.1.134:8808"
+	}],
+	"code": "0"
+}

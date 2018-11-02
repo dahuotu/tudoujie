@@ -1,0 +1,20 @@
+{
+	"msg": "success",
+	"data": [{
+		"id": "42",
+		"memberId": "1680",
+		"nickName": "Linda的第一店铺",
+		"photo": "upload/face.jpg",
+		"sellerId": "2",
+		"sellerProtocol": "1",
+		"payProtocol": "1",
+		"sellerName": "许多返",
+		"sellerSignUrl": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181014/8231966277674eb4b63b24705d1d03e6.png",
+		"sellerStatus": "1",
+		"collectionNumber": "0",
+		"orderCount": "0",
+		"createTime": "1539530215000",
+		"updateTime": "1539791555000"
+	}],
+	"code": "0"
+}

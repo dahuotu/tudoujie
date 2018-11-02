@@ -1,0 +1,49 @@
+{
+	"msg": "success",
+	"data": [{
+		"title": "唾沫",
+		"linkUrl": "http://dev-sbzhibo-video.oss-cn-hangzhou.aliyuncs.com/cycle/0dde09dff9df416b998f813e44665d03.mp4",
+		"image": "http://dev-sbzhibo-image.oss-cn-hangzhou.aliyuncs.com/video/9726823697df49609e955fdd4fce31d1.jpg"
+	}, {
+		"title": "联想（Lenovo）14英寸超便携本（6Y30 4G  摄像头 蓝牙 win10）",
+		"linkUrl": "2",
+		"image": "http://dev-sbzhibo-image.oss-cn-hangzhou.aliyuncs.com/cycle/74d69fae11d34709ae155665add08b26.jpg"
+	}, {
+		"title": "华硕（ASUS）F554LI5200 15.6英寸笔记本电脑",
+		"linkUrl": "3",
+		"image": "http://dev-sbzhibo-image.oss-cn-hangzhou.aliyuncs.com/cycle/256579fdd38b4f439c12e4f7770d8f1b.jpg"
+	}, {
+		"title": "231311",
+		"linkUrl": "https://testadminejavashop.tudouni.doubozhibo.com/front/product/23.html?preview=1",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181101/99b0109f350a45448471ccd3269a75dd.png"
+	}, {
+		"title": "纤衣良品",
+		"linkUrl": "http://127.0.0.1:8082/front/product/23.html?preview=1",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181101/12189b519a2c4112ba5bce45c03ff173.png"
+	}, {
+		"title": "aaaaaaaa",
+		"linkUrl": "https://testadminejavashop.tudouni.doubozhibo.com/front/product/2.html?preview=1",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181101/1684d2e43b2e4a1ab1382519efe951ad.png"
+	}, {
+		"title": "231311",
+		"linkUrl": "http://127.0.0.1:8082/front/product/1.html?preview=1",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181101/541d4f15cedd426e82f3481a67a2df18.png"
+	}, {
+		"title": "Ausu",
+		"linkUrl": "http://localhost:8084/front/product/3.html?preview=1",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181017/df9f128f21e94b758f707828dd116bb8.png"
+	}, {
+		"title": "apple",
+		"linkUrl": "http://localhost:8084/front/product/1.html?preview=1",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181016/e68af9bcbcae41d09e8459e64f2c5dfc.png"
+	}, {
+		"title": "bb",
+		"linkUrl": "http://www.baidu.com",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181015/638c5e3fed4b4e029933714db7c1ad77.png"
+	}, {
+		"title": "glyyyy",
+		"linkUrl": "http://www.baidu.com",
+		"image": "https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181013/a18dbb384dfd42c4837b25dd05504a5f.png"
+	}],
+	"code": "0"
+}

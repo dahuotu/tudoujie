@@ -1,0 +1,45 @@
+{
+	"msg": "success",
+	"data": {
+		"isFlashSale": 0,
+		"name": "Apple MacBook Pro 13.3英寸笔记本电脑MF839CH/A",
+		"malMobilePrice": 6788.00,
+		"virtualSales": 10,
+		"actualSales": 13,
+		"productStock": 987,
+		"description": "<table border='0' cellspacing='0' cellpadding='0' style='border-spacing: 0px; margin: 0px auto; color: rgb(51, 51, 51); font-family: Arial, SimSun, Tahoma, Helvetica, sans-serif; font-size: 12px; line-height: 18px; white-space: normal; widows: 1;'><tbody><tr><td style='padding: 0px; border-collapse: collapse; border-spacing: 0px;'><a href='http://shop.gome.com.cn/apple' target='_blank' style='color: rgb(64, 64, 64); outline: 0px; cursor: pointer; border-style: none;'><img src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/20151223.jpg' class='gomeImgLoad' gome-src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/20151223.jpg' style='border: none; vertical-align: middle; display: inline-block;'/></a></td></tr><tr><td style='padding: 0px; border-collapse: collapse; border-spacing: 0px;'>&nbsp;</td></tr></tbody></table><table border='0' cellspacing='0' cellpadding='0' style='border-spacing: 0px; margin: 0px auto; color: rgb(51, 51, 51); font-family: Arial, SimSun, Tahoma, Helvetica, sans-serif; font-size: 12px; line-height: 18px; white-space: normal; widows: 1;'><tbody><tr><td style='padding: 0px; border-collapse: collapse; border-spacing: 0px;'><img src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_01.jpg' class='gomeImgLoad' gome-src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_01.jpg' alt='' style='border: none; vertical-align: middle; display: inline-block;'/></td></tr><tr><td style='padding: 0px; border-collapse: collapse; border-spacing: 0px;'><img src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_03.jpg' class='gomeImgLoad' gome-src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_03.jpg' alt='' style='border: none; vertical-align: middle; display: inline-block;'/></td></tr><tr><td style='padding: 0px; border-collapse: collapse; border-spacing: 0px;'><img src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_04.jpg' class='gomeImgLoad' gome-src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_04.jpg' alt='' style='border: none; vertical-align: middle; display: inline-block;'/></td></tr><tr><td style='padding: 0px; border-collapse: collapse; border-spacing: 0px;'><img src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_05.jpg' class='gomeImgLoad' gome-src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_05.jpg' alt='' style='border: none; vertical-align: middle; display: inline-block;'/></td></tr><tr><td style='padding: 0px; border-collapse: collapse; border-spacing: 0px;'><img src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_06.jpg' class='gomeImgLoad' gome-src='http://img5.gomein.net.cn/image/prodimg/productDesc/descImg/201512/desc1223-111/1122400452/00_06.jpg' alt='' style='border: none; vertical-align: middle; display: inline-block;'/></td></tr></tbody></table><p><br/></p>",
+		"carousel": ["/images/seller/1/6bf96446-03b8-4304-8ac7-b5c0fdbbbd24.jpg", "/images/seller/1/937631a9-84a9-4a1d-bce2-8889c9a0569d.jpg"],
+		"allProdListMap": {
+			"": {
+				"id": 1,
+				"normName": "",
+				"productStock": 987,
+				"images": "https://testresourceejavashop.tudouni.doubozhibo.com/ejsimage",
+				"malMobilePrice": 6799.00,
+				"isFlashSale": 0
+			},
+			"颜色,粉色;尺寸,XXL": {
+				"id": 147,
+				"normName": "颜色,粉色;尺寸,XXL",
+				"productStock": 200,
+				"images": "https://testresourceejavashop.tudouni.doubozhibo.com/ejsimage/images/seller/2/88895b97-6e56-43a0-8be3-181d1959cca3.jpg",
+				"malMobilePrice": 271.00,
+				"isFlashSale": 0
+			}
+		},
+		"allAttrs": [{
+			"name": "颜色",
+			"values": [{
+				"value": "粉色",
+				"show": 1
+			}]
+		}, {
+			"name": "尺寸",
+			"values": [{
+				"value": "XXL",
+				"show": 1
+			}]
+		}]
+	},
+	"code": "0"
+}

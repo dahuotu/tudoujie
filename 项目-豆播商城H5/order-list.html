@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>订单列表</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" v-on:click="linkBack"></div>
+				我的订单
+			</header>
+			<div class="order">
+				<div class="search">
+					<input type="search" placeholder="商品名称／商品编号／订单号" />
+				</div>
+				<div class="tab">
+					<ul>
+						<li class="tab-active">
+							<label class="dot">全部</label>
+						</li>
+						<li>
+							<label class="dot">待付款</label>
+						</li>
+						<li>
+							<label class="dot">待发货</label>
+						</li>
+						<li>
+							<label class="dot">待收货</label>
+						</li>
+						<li>
+							<label class="dot">待评价</label>
+						</li>
+					</ul>
+				</div>
+				<div class="panel orderDetail-panel">
+					<div class="shoper">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="order-state">
+							等待买家付款
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="title">顺丰包邮荔枝 海南三亚妃子笑荔枝新...</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="settlement">
+						<div class="form-left">
+							共1件商品
+						</div>
+						<div class="form-right">
+							实付款： <span class="p">¥89.8</span><span class="tips">（含运费¥10）</span>
+						</div>
+					</div>
+					<div class="op">
+						<div class="btn-gray">取消订单</div>
+						<div class="btn-green">付款</div>
+					</div>
+				</div>
+				<div class="panel orderDetail-panel">
+					<div class="shoper">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="order-state">
+							等待买家收货
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="title">顺丰包邮荔枝 海南三亚妃子笑荔枝新...</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+											<div class="btn-end">退款</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="title">顺丰包邮荔枝 海南三亚妃子笑荔枝新...</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+											<div class="ft-end">退款中</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="settlement">
+						<div class="form-left">
+							共2件商品
+						</div>
+						<div class="form-right">
+							实付款： <span class="p">¥89.8</span><span class="tips">（含运费¥10）</span>
+						</div>
+					</div>
+					<div class="op">
+						<div class="btn-gray">查看物流</div>
+						<div class="btn-green">确认收货</div>
+					</div>
+				</div>
+				<div class="panel orderDetail-panel">
+					<div class="shoper">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="order-state">
+							交易成功
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="title">顺丰包邮荔枝 海南三亚妃子笑荔枝新...</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="settlement">
+						<div class="form-left">
+							共1件商品
+						</div>
+						<div class="form-right">
+							实付款： <span class="p">¥89.8</span><span class="tips">（含运费¥10）</span>
+						</div>
+					</div>
+					<div class="op">
+						<div class="btn-gray">查看物流</div>
+						<div class="btn-green">评价</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+
+		</style>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				linkBack: function() {
+					history.back();
+				}
+			},
+		});
+	</script>
+
+</html>

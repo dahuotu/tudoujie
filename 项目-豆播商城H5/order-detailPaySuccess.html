@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>订单详情-付款成功</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" v-on:click="linkBack"></div>
+				支付结果
+			</header>
+			<div class="order">
+				<div class="orderDetail-panel padding no-border">
+					<div class="state">
+						<div class="icon">
+							<div class="icon-bag"></div>
+						</div>
+						<div class="order-info">
+							<div class="title">付款成功</div>
+							<div class="info">
+								<div class="msg28">您的包裹整装待发</div>
+								<div class="msg24">2018.08.30 17:46:05</div>
+							</div>
+						</div>
+						<div class="arrow-right"></div>
+					</div>
+					<div class="address">
+						<div class="map">
+							<div class="icon-map"></div>
+						</div>
+						<div class="info">
+							<div class="link">
+								<div class="name">张女士</div>
+								<div class="mobile">158****6266<span class="def">默认</span></div>
+							</div>
+							<div class="content">
+								广东省深圳市南山软件产业基地5栋A座528室
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="money-button">
+					<div class="price-money">
+						商品总额<span class="ft45">¥79.8</span>
+					</div>
+					<div class="button-group">
+						<div class="li">
+							<div class="btn-gray">
+								订单详情
+							</div>
+						</div>
+						<div class="li">
+							<div class="btn-green">
+								返回首页
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="want">
+					<div class="big-title">
+						 你可能还想买
+					</div>
+					<div class="list">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="shop-info">
+									<div class="face">
+										<img src="upload/t01d7de9ec9fd9ce918.png" class="img-responsive round" />
+									</div>
+									<div class="pro">Linda的第一店舖</div>
+								</div>
+								<div class="title">正宗阳澄湖大闸蟹 米其林 餐厅之选 大闸蟹...</div>
+								<div class="price">
+									¥<span>79.8</span>
+								</div>
+							</li>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="shop-info">
+									<div class="face">
+										<img src="upload/t01d7de9ec9fd9ce918.png" class="img-responsive round" />
+									</div>
+									<div class="pro">Linda的第一店舖</div>
+								</div>
+								<div class="title">正宗阳澄湖大闸蟹 米其林 餐厅之选 大闸蟹...</div>
+								<div class="price">
+									¥<span>79.8</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+		
+		</style>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				linkBack: function() {
+					history.back();
+				}
+			},
+		});
+	</script>
+
+</html>
