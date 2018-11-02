@@ -18,32 +18,40 @@
 		<title>店铺首页</title>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/app.css" />
-		<link rel="stylesheet" href="http://m.ydui.org/css/ydui.css?rev=a4b9d6e8c9c1cae7ea4676f911682af7" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<style type="text/css">
-			.slider-item {
-				width: 100%;
-				height: 3.25rem;
-				-webkit-flex-shrink: 0;
-				-ms-flex-negative: 0;
-				flex-shrink: 0;
+			.swiper-wrapper {
+				height: 3.5rem;
 			}
 			
-			.slider-item img {
-				width: 6.9rem;
+			.swiper-wrapper .swiper-slide {
 				height: 3rem;
+				overflow: hidden;
 				border-radius: 0.06rem;
 			}
 			
-			.slider-pagination {
-				bottom: 0;
-				margin-top: 0.25rem;
+			.swiper-wrapper .swiper-slide img {
+				border-radius: 0.06rem;
+			}
+			
+			.swiper-pagination {
+				margin-bottom: -0.25rem;
+			}
+			
+			.swiper-pagination-bullet {
+				background: #898989;
+			}
+			
+			.swiper-pagination-bullet-active {
+				opacity: 1;
+				background: linear-gradient(90deg, rgba(1, 175, 102, 1) 0%, rgba(193, 214, 46, 1) 100%);
 			}
 		</style>
 	</head>
 
 	<body>
-		<div id="app" data-item="">
+		<div id="app">
 			<header class="header-transparent">
 				<div class="back-white" onclick="history.back()"></div>
 			</header>
@@ -62,7 +70,7 @@
 							<div class="dot"></div>&nbsp;&nbsp;直播中
 						</div>
 						<div class="signature">
-							<img src="https://tudouni-ejavashop.oss-cn-hangzhou.aliyuncs.com/images/20181014/8231966277674eb4b63b24705d1d03e6.png" class="img-responsive" />
+							<img src="upload/8231966277674eb4b63b24705d1d03e6.png" class="img-responsive" />
 						</div>
 					</div>
 					<div class="face-round">
@@ -70,17 +78,13 @@
 					</div>
 				</div>
 				<div class="banner">
-					<div class="m-slider" id="J_Slider">
-						<div class="slider-wrapper">
-							<template v-for="(data,index) in bannerImgs">
-								<div class="slider-item" :key='data.index'>
-									<a href="#">
-										<img :src="data.image" class="img-responsive" />
-									</a>
-								</div>
-							</template>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" v-for="items in bannerImgs">
+								<a href=""><img :src="items.image" class="img-responsive"></a>
+							</div>
 						</div>
-						<div class="slider-pagination"></div>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 				<div id="tab-nav" class="tab">
@@ -141,12 +145,11 @@
 					<div class="customer-text">联系客服</div>
 				</div>
 			</footer>
-			<input id="hid_item" type="hidden" value="0" />
 		</div>
 	</body>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/vue.min.js"></script>
-	<script src="js/ydui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			app.getBannerImg();
@@ -164,7 +167,7 @@
 		var app = new Vue({
 			el: '#app',
 			data: {
-				"storeId": "76",
+				"storeId": "1",
 				"bannerImgs": "",
 			},
 			methods: {
@@ -178,15 +181,20 @@
 						dataType: "json",
 						success: function(res) {
 							app.bannerImgs = res.data;
-							
-							$('#J_Slider').slider({
-								speed: 200,
-								autoplay: 2000,
-								itemLength: res.data.length,
-								lazyLoad: true
+							app.$nextTick(() => {
+								app.initSwiper();
 							});
 						}
 					})
+				},
+				initSwiper: function() {
+					let mySwiper = new Swiper('.swiper-container', {
+						autoplay: 2000, //可选选项，自动滑动
+						//分页器
+						pagination: '.swiper-pagination',
+						paginationClickable: true,
+						observer: true
+					});
 				},
 			}
 		});
