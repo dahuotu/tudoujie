@@ -18,7 +18,8 @@
 		<title>店铺首页</title>
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/app.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/videojs.min.css">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<style type="text/css">
 			.swiper-wrapper {
@@ -58,6 +59,11 @@
 			<div class="home">
 				<div class="bg-img">
 					<img src="upload/bg.jpeg" class="img-responsive" />
+				</div>
+				<div class="video-wrap hide">
+					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="upload/bg.jpeg" data-setup="{}">
+						<source v-bind:src="videomp4" type="video/mp4">
+					</video>
 				</div>
 				<div class="bg-block">
 					<img src="upload/block.png" class="img-responsive" />
@@ -149,7 +155,9 @@
 	</body>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/vue.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/video.min.js"></script>
+	<script src="js/zh-CN.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			app.getBannerImg();
@@ -169,6 +177,7 @@
 			data: {
 				"storeId": "1",
 				"bannerImgs": "",
+				"videomp4": "http://vjs.zencdn.net/v/oceans.mp4",
 			},
 			methods: {
 				getBannerImg: function() {
@@ -183,6 +192,7 @@
 							app.bannerImgs = res.data;
 							app.$nextTick(() => {
 								app.initSwiper();
+								app.initVideo();
 							});
 						}
 					})
@@ -194,6 +204,15 @@
 						pagination: '.swiper-pagination',
 						paginationClickable: true,
 						observer: true
+					});
+				},
+				initVideo: function() {
+					var myPlayer = videojs('my-video');
+					videojs("my-video").ready(function() {
+						var myPlayer = this;
+						myPlayer.play();
+						myPlayer.width($("body").width());
+						myPlayer.height($(".video-wrap").height());
 					});
 				},
 			}

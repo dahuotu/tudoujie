@@ -79,6 +79,12 @@ input[type="submit"] {
 	height: auto;
 }
 
+.video-responsive
+{
+	width: 100%;
+	height: 6.2rem;
+}
+
 .hide {
 	display: none;
 }
