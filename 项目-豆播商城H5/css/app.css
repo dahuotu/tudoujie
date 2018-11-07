@@ -1930,7 +1930,7 @@ footer {
 }
 
 .foot-button .btn-save-green {
-  background:linear-gradient(90deg,rgba(44,184,90,1) 0%,rgba(106,197,71,1) 100%);
+	background: linear-gradient(90deg, rgba(44, 184, 90, 1) 0%, rgba(106, 197, 71, 1) 100%);
 	color: #fff;
 	pointer-events: auto;
 }
@@ -3509,6 +3509,142 @@ footer {
 	margin: 0 0.3rem;
 	border: none;
 	background: linear-gradient(90deg, rgba(44, 184, 90, 1) 0%, rgba(106, 197, 71, 1) 100%);
+}
+
+
+/*收藏夹*/
+
+.favorite {
+	padding-top: 1rem;
+	background: #F8F8F8;
+}
+
+.favorite .panel {
+	height: 2.9rem;
+	box-shadow: 0 0.02rem 0.1rem 0 rgba(218, 218, 218, 0.5);
+	border-radius: 0.1rem;
+	padding: 0.2rem 0.2rem 0 0.2rem;
+	margin: 0.3rem;
+	color: #000000;
+}
+
+.favorite .panel .logo {
+	width: 100%;
+	height: 1.02rem;
+	display: flex;
+}
+
+.favorite .panel .logo .logo-icon {
+	width: 20%;
+}
+
+.favorite .panel .logo .logo-icon img {
+	width: 1.02rem;
+	height: 1.02rem;
+	background: #D8D8D8;
+	border-radius: 0.04rem;
+	border: 0.02rem solid #EDEDED;
+}
+
+.favorite .panel .logo .logo-info {
+	width: 60%;
+}
+
+.favorite .panel .logo .logo-info .sub-name {
+	height: 0.4rem;
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: #000;
+	line-height: 0.4rem;
+	margin-top: 0.22rem;
+}
+
+.favorite .panel .logo .logo-info .sub-type {
+	height: 0.32rem;
+	font-size: 0.22rem;
+	font-family: PingFangSC-Light;
+	font-weight: 300;
+	color: #999999;
+	line-height: 0.32rem;
+	margin-top: 0.04rem;
+}
+
+.favorite .panel .logo .logo-btn {
+	width: 20%;
+}
+
+.favorite .panel .logo .logo-btn .btn {
+	height: 0.48rem;
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #898989;
+	line-height: 0.4rem;
+	position: absolute;
+	right: 0.5rem;
+	line-height: 0.48rem;
+	margin-top: 0.22rem;
+}
+
+.favorite .panel .logo .logo-btn .btn-green {
+	height: 0.48rem;
+	border-radius: 0.24rem;
+	border: 0.02rem solid #6AC547;
+	width: 0.98rem;
+	text-align: center;
+	line-height: 0.48rem;
+	color: #6AC547;
+}
+
+.favorite .panel .piclist {
+	margin-top: 0.2rem;
+}
+
+.favorite .panel .piclist ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.favorite .panel .piclist ul li:first-child {
+	margin-left: 0
+}
+
+.favorite .panel .piclist ul li {
+	width: 1.48rem;
+	margin-left: 0.2rem;
+	height: 1.48rem;
+}
+
+.favorite .panel .piclist ul li img {
+	width: 1.48rem;
+	height: 1.48rem;
+	border-radius: 0.04rem;
+}
+
+.favorite .panel .piclist ul li .desk {
+	background: linear-gradient(180deg, rgba(238, 238, 238, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+	border-radius: 0.04rem;
+	width: 1.48rem;
+	height: 1.48rem;
+	position: absolute;
+	margin-top: -1.48rem;
+}
+
+.favorite .panel .piclist ul li .desk .sub-price {
+	width: 100%;
+	height: 0.34rem;
+	font-size: 0.2rem;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-indent: 0.05rem;
+	line-height: 0.34rem;
+	position: absolute;
+	bottom: 0;
+}
+
+.favorite .panel .piclist ul li .desk .sub-price span {
+	font-size: 0.24rem;
 }
 
 
