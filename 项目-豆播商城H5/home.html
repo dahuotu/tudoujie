@@ -57,16 +57,16 @@
 				<div class="back-white" onclick="history.back()"></div>
 			</header>
 			<div class="home">
-				<div class="bg-img">
-					<img src="upload/bg.jpeg" class="img-responsive" />
-				</div>
-				<div class="video-wrap hide">
-					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="upload/bg.jpeg" data-setup="{}">
-						<source v-bind:src="videomp4" type="video/mp4">
-					</video>
+				<div class="bg-img" style="background-image: url(upload/bg.jpeg);">
 				</div>
 				<div class="bg-block">
 					<img src="upload/block.png" class="img-responsive" />
+				</div>
+				<div class="video-wrap hide">
+					<div class="play-close" v-on:click="playClose"></div>
+					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup="{}">
+						<source v-bind:src="videomp4" type="video/mp4">
+					</video>
 				</div>
 				<div class="face">
 					<div class="face-shops">
@@ -78,6 +78,8 @@
 						<div class="signature">
 							<img src="upload/8231966277674eb4b63b24705d1d03e6.png" class="img-responsive" />
 						</div>
+					</div>
+					<div class="video-play" v-on:click="playVideo">
 					</div>
 					<div class="face-round">
 						<img src="upload/face.jpg" class="img-responsive" />
@@ -142,7 +144,7 @@
 				<div style="clear:both;"></div>
 			</div>
 			<footer class="shop">
-				<div class="class">商品分类</div>
+				<div class="class" v-on:click="linkCategory">商品分类</div>
 				<div class="share">分享店铺</div>
 				<div class="customer">
 					<div class="customer-icon">
@@ -172,6 +174,8 @@
 
 		});
 
+		
+
 		var app = new Vue({
 			el: '#app',
 			data: {
@@ -192,7 +196,6 @@
 							app.bannerImgs = res.data;
 							app.$nextTick(() => {
 								app.initSwiper();
-								app.initVideo();
 							});
 						}
 					})
@@ -214,6 +217,16 @@
 						myPlayer.width($("body").width());
 						myPlayer.height($(".video-wrap").height());
 					});
+				},
+				linkCategory: function() {
+					location.href = 'shop-category.html';
+				},
+				playVideo: function() {
+					$(".video-wrap").removeClass("hide").addClass("video-full");
+					app.initVideo();
+				},
+				playClose: function() {
+					$(".video-wrap").addClass("hide").removeClass("video-full");
 				},
 			}
 		});

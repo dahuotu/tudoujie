@@ -30,6 +30,136 @@
 				<div class="back-gray" v-on:click="linkBack"></div>
 				商品分类
 			</header>
+			<div class="shopcategory">
+				<div class="menu">
+					<ul>
+						<li id="mli_1" v-on:click="liActive('1')">男装</li>
+						<li id="mli_2" v-on:click="liActive('2')">运动户外</li>
+						<li id="mli_3" v-on:click="liActive('3')">女装</li>
+						<li id="mli_4" v-on:click="liActive('4')">运动户外</li>
+						<li id="mli_5" v-on:click="liActive('5')">女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+						<li>运动户外</li>
+						<li>女装</li>
+					</ul>
+				</div>
+				<div class="list">
+					<div class="li">
+						<h2>热门类目</h2>
+						<ul>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+						</ul>
+					</div>
+					<div class="li">
+						<h2>裤子</h2>
+						<ul>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+						</ul>
+					</div>
+					<div class="li">
+						<h2>水果</h2>
+						<ul>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+							<li>
+								<img src="upload/3.jpg" class="img-responsive" />
+								<div class="product-name">哈伦裤</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script src="js/jquery.min.js"></script>
@@ -49,8 +179,9 @@
 			},
 			methods: {
 				liActive: function(lid) {
-					$(".product-list li").removeClass("li-active");
-					$(".product-list #li_" + lid).addClass("li-active");
+					//商品分类选择效果
+					$(".menu li").removeClass("li-active");
+					$(".menu #mli_" + lid).addClass("li-active");
 				},
 				linkBack: function() {
 					history.back();
