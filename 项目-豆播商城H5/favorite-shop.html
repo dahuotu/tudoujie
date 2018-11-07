@@ -20,7 +20,9 @@
 		<link rel="Stylesheet" href="css/app.css" />
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<style type="text/css">
-
+			body {
+				background: #F8F8F8;
+			}
 		</style>
 	</head>
 
@@ -84,7 +86,7 @@
 							<div class="sub-type">经营类别：服装</div>
 						</div>
 						<div class="logo-btn">
-							<div class="btn btn-green">收藏</div>
+							<div id="btn_fav_1" class="btn btn-green" v-on:click="setFavorite('1')">收藏</div>
 						</div>
 					</div>
 					<div class="piclist">
@@ -136,6 +138,11 @@
 
 			},
 			methods: {
+				setFavorite: function(fid) {
+					//收藏
+					console.log(fid);
+					$("#btn_fav_" + fid).removeClass("btn-green").text("已收藏");
+				},
 				linkBack: function() {
 					history.back();
 				}

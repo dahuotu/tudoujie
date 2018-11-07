@@ -20,7 +20,9 @@
 		<link rel="Stylesheet" href="css/app.css" />
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<style type="text/css">
-
+			body {
+				background: #F8F8F8;
+			}
 		</style>
 	</head>
 
@@ -29,8 +31,83 @@
 			<header class="header-white">
 				<div class="back-gray" v-on:click="linkBack"></div>
 				收藏商品
-				<div class="manage">管理</div>
+				<div class="manage hide">管理</div>
 			</header>
+			<div class="favorite">
+				<div class="product-list">
+					<ul>
+						<li id="li_1" v-on:click="liActive('1')">
+							<div class="product">
+								<div class="pic">
+									<img src="upload/1.jpg" class="img-responsive" />
+									<div class="desk"></div>
+								</div>
+								<div class="info">
+									<div class="title">
+										李宁男鞋2018凌波 悟空高帮轻便透气一体织袜套潮流…
+									</div>
+									<div class="subtitle">尼康相机代工厂直供</div>
+									<div class="price-info">
+										<div class="price">
+											¥<span>1890.00</span>
+										</div>
+										<div class="comments">123条好评</div>
+									</div>
+								</div>
+							</div>
+							<div class="del-btn hide">
+								删除
+							</div>
+						</li>
+						<li id="li_2" v-on:click="liActive('2')">
+							<div class="product">
+								<div class="pic">
+									<img src="upload/1.jpg" class="img-responsive" />
+									<div class="desk"></div>
+								</div>
+								<div class="info">
+									<div class="title">
+										李宁男鞋2018凌波 悟空高帮轻便透气一体织袜套潮流…
+									</div>
+									<div class="subtitle">尼康相机代工厂直供</div>
+									<div class="price-info">
+										<div class="price">
+											¥<span>1890.00</span>
+										</div>
+										<div class="comments">123条好评</div>
+									</div>
+								</div>
+							</div>
+							<div class="del-btn">
+								删除
+							</div>
+						</li>
+						<li id="li_3" v-on:click="liActive('3')">
+							<div class="product">
+								<div class="pic">
+									<img src="upload/1.jpg" class="img-responsive" />
+									<div class="desk"></div>
+								</div>
+								<div class="info">
+									<div class="title">
+										李宁男鞋2018凌波 悟空高帮轻便透气一体织袜套潮流…
+									</div>
+									<div class="subtitle">尼康相机代工厂直供</div>
+									<div class="price-info">
+										<div class="price">
+											¥<span>1890.00</span>
+										</div>
+										<div class="comments">123条好评</div>
+									</div>
+								</div>
+							</div>
+							<div class="del-btn">
+								删除
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 			<style type="text/css">
 
 			</style>
@@ -53,6 +130,10 @@
 
 			},
 			methods: {
+				liActive: function(lid) {
+					$(".product-list li").removeClass("li-active");
+					$(".product-list #li_"+lid).addClass("li-active");
+				},
 				linkBack: function() {
 					history.back();
 				}
