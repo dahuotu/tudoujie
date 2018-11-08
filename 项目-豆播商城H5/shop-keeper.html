@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>店主首页</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="css/videojs.min.css">
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-shopkeeper">
+				<div class="back-white" v-on:click="linkBack"></div>
+				店主首页
+			</header>
+			<div class="shopkeeper">
+				<div class="shop-bg"></div>
+				<div class="shop-card"></div>
+				<div class="shop-list">
+					<ul>
+						<li>
+							<img src="upload/1.jpg" class="img-responsive round" />
+							<span>水果屋</span>
+						</li>
+						<li>
+							<img src="upload/1.jpg" class="img-responsive round" />
+							<span>水果屋</span>
+						</li>
+						<li>
+							<img src="upload/1.jpg" class="img-responsive round" />
+							<span>水果屋</span>
+						</li>
+						<li>
+							<img src="upload/1.jpg" class="img-responsive round" />
+							<span>水果屋</span>
+						</li>
+						<li>
+							<img src="upload/1.jpg" class="img-responsive round" />
+							<span>水果屋</span>
+						</li>
+					</ul>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="say-list">
+					<ul>
+						<li>
+							<div class="say-panel">
+								<div class="face">
+									<div class="img">
+										<img src="upload/t01d7de9ec9fd9ce918.png" class="img-responsive round" />
+									</div>
+									<div class="name">卡西莫多</div>
+								</div>
+								<div class="say">
+									梨果：苹果、沙果、海棠、野樱莓、枇杷、欧楂、楂、梨（香梨、雪梨 等）、温柏、蔷薇果、花楸 等
+								</div>
+								<div class="imglist">
+									<ul>
+										<li>
+											<img src="upload/1.jpg" class="img-responsive" />
+										</li>
+										<li>
+											<img src="upload/1.jpg" class="img-responsive" />
+										</li>
+										<li>
+											<img src="upload/1.jpg" class="img-responsive" />
+										</li>
+									</ul>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="videolist">
+								</div>
+								<div class="product">
+									<div class="img">
+										<img src="upload/1.jpg" class="img-responsive" />
+									</div>
+									<div class="info">
+										<div class="title">顺丰包邮荔枝 海南三亚妃子笑荔枝新鲜包邮</div>
+										<div class="price">
+											¥<span>89.9</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<style type="text/css">
+
+			</style>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/video.min.js"></script>
+	<script src="js/zh-CN.js"></script>
+	<script type="text/javascript">
+		$(function() {
+
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				linkBack: function() {
+					history.back();
+				},
+			}
+		});
+	</script>
+
+</html>

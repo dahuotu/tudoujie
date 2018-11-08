@@ -25,11 +25,14 @@ footer {
 	line-height: 1rem;
 }
 
+.header-shopkeeper .back-white,
 .header-transparent .back-white {
 	width: 1rem;
 	height: 1rem;
 	background: url('../img/back-white-2x.png') no-repeat 0.31rem 0.3rem;
 	background-size: 45%;
+	position: absolute;
+	left: 0;
 }
 
 .header-transparent .back-gray,
@@ -76,6 +79,16 @@ footer {
 	line-height: 0.34rem;
 	background: url('../img/icon-quotes-2x.png') no-repeat;
 	background-size: 100%;
+}
+
+.header-shopkeeper {
+	color: #fff;
+	background: transparent;
+	font-size: 0.35rem;
+	font-weight: 500;
+	text-align: center;
+	height: 1rem;
+	line-height: 1rem;
 }
 
 .panel {
@@ -333,7 +346,7 @@ footer {
 	overflow: hidden;
 }
 
-.home .video-wrap .play-close{
+.home .video-wrap .play-close {
 	background: url('../img/icon-close.png') #fff no-repeat;
 	width: 0.55rem;
 	height: 0.55rem;
@@ -457,15 +470,15 @@ footer {
 }
 
 .home .banner {
-    padding: 0 0.2rem 0.2rem 0.2rem;
-    width: 94%;
-    margin-top: 0.83rem;
+	padding: 0 0.2rem 0.2rem 0.2rem;
+	width: 94%;
+	margin-top: 0.83rem;
 }
 
 .home .report {
 	width: 94%;
 	height: 1.2rem;
-	background: rgba(255,255,255,1);
+	background: rgba(255, 255, 255, 1);
 	box-shadow: 0.03rem 0.04rem 0.12rem 0px rgba(0, 0, 0, 0.2);
 	border-radius: 0.1rem;
 	margin-top: -0.65rem;
@@ -473,28 +486,29 @@ footer {
 	margin-left: 0.2rem;
 }
 
-.home .report ul{
+.home .report ul {
 	display: flex;
 	margin-top: 0.28rem;
 }
 
-.home .report ul li{
+.home .report ul li {
 	height: 0.61rem;
 	border-left: 0.01rem solid #898989;
 	width: 25%;
 	text-align: center;
 }
 
-.home .report ul li:first-child{
+.home .report ul li:first-child {
 	border-left: 0.01rem solid #fff;
 }
 
-.home .report ul li .title{
+.home .report ul li .title {
 	font-size: 0.28rem;
 	font-weight: 400;
 	color: #1A1A1A;
 }
-.home .report ul li .value{
+
+.home .report ul li .value {
 	font-size: 0.28rem;
 	font-weight: 600;
 	color: #1A1A1A;
@@ -3937,6 +3951,149 @@ footer {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+
+/*店主首页*/
+
+.shopkeeper {}
+
+.shopkeeper .shop-bg {
+	width: 100%;
+	height: 2.76rem;
+	background: #232323;
+	border-radius: 0 0 7% 7%;
+}
+
+.shopkeeper .shop-card {
+	width: 6.9rem;
+	height: 3.36rem;
+	margin: 0 auto;
+	margin-top: -1.32rem;
+	background: #eeeeee;
+}
+
+.shopkeeper .shop-list {
+	margin: 0 auto;
+	width: 94%;
+}
+
+.shopkeeper .shop-list ul {
+	margin-top: 0.4rem;
+}
+
+.shopkeeper .shop-list ul li {
+	width: 1.38rem;
+	float: left;
+	text-align: center;
+}
+
+.shopkeeper .shop-list ul li img {
+	width: 0.88rem;
+	margin: 0 auto;
+}
+
+.shopkeeper .shop-list ul li span {
+	height: 0.4rem;
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #1A1A1A;
+	line-height: 0.4rem;
+	margin-top: 0.16rem;
+}
+
+.shopkeeper .say-list {}
+
+.shopkeeper .say-list ul {}
+
+.shopkeeper .say-list ul li {}
+
+.shopkeeper .say-list ul li .say-panel {
+	padding: 0.3rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .face {
+	width: 100%;
+	display: flex;
+	height: 0.68rem;
+	line-height: 0.68rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .face .img {
+	width: 13%;
+}
+
+.shopkeeper .say-list ul li .say-panel .face .img img {
+	width: 0.68rem;
+	height: 0.68rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .face .name {
+	width: 87%;
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #1A1A1A;
+}
+
+.shopkeeper .say-list ul li .say-panel .say {
+	height: 0.8rem;
+	font-size: 0.28rem;
+	font-weight: 300;
+	color: #1A1A1A;
+	margin-top: 0.2rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .imglist {}
+
+.shopkeeper .say-list ul li .say-panel .imglist ul {}
+
+.shopkeeper .say-list ul li .say-panel .imglist ul li {
+	width: 2.2rem;
+	float: left;
+}
+
+.shopkeeper .say-list ul li .say-panel .videolist {}
+
+.shopkeeper .say-list ul li .say-panel .product {
+	display: flex;
+	height: 1.3rem;
+	background: #FBFCFB;
+	border-radius: 0.04rem;
+	margin-top: 0.3rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .product .img {
+	width: 20%;
+}
+
+.shopkeeper .say-list ul li .say-panel .product .img img {
+	width: 1.3rem;
+	height: 1.3rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .product .info {
+	width: 80%;
+	padding: 0.02rem;
+	margin-left: 0.2rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .product .info .title {
+	height: 0.82rem;
+	font-size: 0.28rem;
+	font-weight: 300;
+	color: #1A1A1A;
+	line-height: 0.4rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .product .info .price {
+	font-size: 0.24rem;
+	font-weight: 600;
+	color: #FF3B30;
+	line-height: 0.34rem;
+}
+
+.shopkeeper .say-list ul li .say-panel .product .info .price span {
+	font-size: 0.28rem;
 }
 
 
