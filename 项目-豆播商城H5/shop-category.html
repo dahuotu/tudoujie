@@ -74,27 +74,27 @@
 					<div class="li">
 						<h2>热门类目</h2>
 						<ul>
-							<li>
+							<li v-on:click="liLinkShopList()">
 								<img src="upload/3.jpg" class="img-responsive" />
 								<div class="product-name">哈伦裤</div>
 							</li>
-							<li>
+							<li v-on:click="liLinkShopList()">
 								<img src="upload/3.jpg" class="img-responsive" />
 								<div class="product-name">哈伦裤</div>
 							</li>
-							<li>
+							<li v-on:click="liLinkShopList()">
 								<img src="upload/3.jpg" class="img-responsive" />
 								<div class="product-name">哈伦裤</div>
 							</li>
-							<li>
+							<li v-on:click="liLinkShopList()">
 								<img src="upload/3.jpg" class="img-responsive" />
 								<div class="product-name">哈伦裤</div>
 							</li>
-							<li>
+							<li v-on:click="liLinkShopList()">
 								<img src="upload/3.jpg" class="img-responsive" />
 								<div class="product-name">哈伦裤</div>
 							</li>
-							<li>
+							<li v-on:click="liLinkShopList()">
 								<img src="upload/3.jpg" class="img-responsive" />
 								<div class="product-name">哈伦裤</div>
 							</li>
@@ -185,6 +185,9 @@
 				},
 				linkBack: function() {
 					history.back();
+				},
+				liLinkShopList:function(){
+					location.href='shop-list.html';
 				}
 			},
 		});

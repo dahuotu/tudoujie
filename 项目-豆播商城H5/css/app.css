@@ -425,10 +425,18 @@ footer {
 }
 
 .home .face .face-shops .signature {
-	width: 1.52rem;
-	height: 0.53rem;
+	width: 1.9rem;
+	height: 0.74rem;
 	position: absolute;
-	margin-top: -0.53rem;
+	margin-top: -0.74rem;
+	right: 1.14rem;
+}
+
+.home .face .face-shops .signature-dz {
+	width: 1.9rem;
+	height: 0.74rem;
+	position: absolute;
+	margin-top: 0;
 	right: 1.14rem;
 }
 
@@ -442,10 +450,54 @@ footer {
 	border-radius: 50%;
 }
 
+.home .face .face-round img {
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+}
+
 .home .banner {
-	padding: 0 0.2rem 0.2rem 0.2rem;
+    padding: 0 0.2rem 0.2rem 0.2rem;
+    width: 94%;
+    margin-top: 0.83rem;
+}
+
+.home .report {
 	width: 94%;
-	margin-top: 0.83rem;
+	height: 1.2rem;
+	background: rgba(255,255,255,1);
+	box-shadow: 0.03rem 0.04rem 0.12rem 0px rgba(0, 0, 0, 0.2);
+	border-radius: 0.1rem;
+	margin-top: -0.65rem;
+	position: absolute;
+	margin-left: 0.2rem;
+}
+
+.home .report ul{
+	display: flex;
+	margin-top: 0.28rem;
+}
+
+.home .report ul li{
+	height: 0.61rem;
+	border-left: 0.01rem solid #898989;
+	width: 25%;
+	text-align: center;
+}
+
+.home .report ul li:first-child{
+	border-left: 0.01rem solid #fff;
+}
+
+.home .report ul li .title{
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #1A1A1A;
+}
+.home .report ul li .value{
+	font-size: 0.28rem;
+	font-weight: 600;
+	color: #1A1A1A;
 }
 
 .home .tab,
