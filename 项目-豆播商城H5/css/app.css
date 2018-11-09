@@ -4319,6 +4319,140 @@ footer {
 	font-size: 0.28rem;
 }
 
+.express {}
+
+.express .panel {
+	display: flex;
+	/*! height: 1.84rem; */
+	background: #FFFFFF;
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #333333;
+	padding: 0;
+}
+
+.express .panel .img {
+	background: #D8D8D8;
+	height: 1.44rem;
+	margin-left: 0.3rem;
+	margin-bottom: 0.3rem;
+}
+
+.express .panel .img img {
+	width: 1.44rem;
+	height: 1.44rem;
+	border-radius: 0.1rem;
+}
+
+.express .panel .info {
+	margin-left: 0.3rem;
+}
+
+.express .panel .info .text {
+	margin-bottom: 0.1rem;
+}
+
+.express .panel .info .text span {}
+
+.express .panel ul {
+	padding: 0;
+	margin: 0.3rem 0 0.3rem 0.3rem;
+}
+
+.express .panel ul li {
+	display: flex;
+	height: 1.18rem;
+}
+
+.express .panel ul .li-active {
+	display: flex;
+	height: 1.62rem;
+}
+
+.express .panel ul li .line {
+	width: 0.06rem;
+	background: #E0E0E0;
+	position: absolute;
+	height: 1.18rem;
+	margin-top: 0.36rem;
+}
+
+.express .panel ul .li-active .line {
+	width: 0.06rem;
+	background: #E0E0E0;
+	position: absolute;
+	height: 1.62rem;
+	margin-top: 0.36rem;
+}
+
+.express .panel ul li:last-child .line {
+	width: 0.06rem;
+	background: #fff;
+	position: absolute;
+	height: 1.18rem;
+	margin-top: 0.36rem;
+}
+
+.express .panel ul li .dot {
+	border-radius: 50%;
+	width: 0.16rem;
+	height: 0.16rem;
+	background: #EEEEEE;
+	position: absolute;
+	margin-left: -0.06rem;
+	z-index: 1;
+	margin-top: 0.36rem;
+}
+
+.express .panel ul .li-active .dot {
+	width: 0.24rem;
+	height: 0.24rem;
+	background: #80F48E;
+	border-radius: 50%;
+	margin-left: -0.08rem;
+}
+
+.express .panel ul li .row {
+	border-bottom: 0.01rem solid #eeeeee;
+	width: 100%;
+	margin-left: 0.9rem;
+}
+
+.express .panel ul li .row .content {
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #999999;
+	margin-top: 0.2rem;
+}
+
+.express .panel ul .li-active .row .content {
+	height: 0.8rem;
+	font-size: 0.28rem;
+	font-weight: 400;
+	margin-top: 0.2rem;
+	color: #6AC547;
+}
+
+.express .panel ul .li-active .row .content span {
+	color: #9ECCF9;
+}
+
+.express .panel ul li .row .subtime {
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #999999;
+	margin-bottom: 0.2rem;
+	margin-top: 0.04rem;
+}
+
+.express .panel ul .li-active .row .subtime {
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #6AC547;
+	margin-bottom: 0.2rem;
+	margin-top: 0.04rem;
+}
+
 
 /*动画*/
 

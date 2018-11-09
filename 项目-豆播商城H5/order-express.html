@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>订单详情-付款成功</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+			body {
+				background: #F8F8F8;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" v-on:click="linkBack"></div>
+				查看物流
+			</header>
+			<div class="order express">
+				<div class="panel">
+					<div class="img">
+						<img src="upload/d3.png" class="img-responsive" />
+					</div>
+					<div class="info">
+						<div class="text">物流状态：<span>运输中</span></div>
+						<div class="text">快递公司：<span>顺丰快递</span></div>
+						<div class="text">快递单号：<span>56478907654789</span></div>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="panel">
+					<ul>
+						<li class="li-active">
+							<div class="dot"></div>
+							<div class="line"></div>
+							<div class="row">
+								<div class="content">【苏州市】江苏苏州公司派件员：长青分布4 <span>1802329794</span> 正在为您派件</div>
+								<div class="subtime">2016-05-22 12:11:33</div>
+							</div>
+						</li>
+						<li>
+							<div class="dot"></div>
+							<div class="line"></div>
+							<div class="row">
+								<div class="content">【苏州市】江苏苏州中转部 已发出</div>
+								<div class="subtime">2016-05-22 12:11:33</div>
+							</div>
+						</li>
+						<li>
+							<div class="dot"></div>
+							<div class="line"></div>
+							<div class="row">
+								<div class="content">【苏州市】江苏苏州中转部 已揽件</div>
+								<div class="subtime">2016-05-22 12:11:33</div>
+							</div>
+						</li>
+						<li>
+							<div class="dot"></div>
+							<div class="line"></div>
+							<div class="row">
+								<div class="content">【苏州市】江苏苏州中转部 已揽件</div>
+								<div class="subtime">2016-05-22 12:11:33</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				linkBack: function() {
+					history.back();
+				}
+			},
+		});
+	</script>
+
+</html>
