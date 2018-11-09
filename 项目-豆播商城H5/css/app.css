@@ -3958,6 +3958,28 @@ footer {
 
 .shopkeeper {}
 
+.shopkeeper .shop-title {
+	height: 0.4rem;
+	font-size: 0.28rem;
+	font-weight: 600;
+	color: #1A1A1A;
+	line-height: 0.4rem;
+	display: flex;
+	padding: 0 0.3rem;
+}
+
+.shopkeeper .shop-title .line {
+	width: 0.12rem;
+	height: 0.28rem;
+	background: linear-gradient(90deg, rgba(71, 215, 118, 1) 0%, rgba(136, 225, 101, 1) 100%);
+	border-radius: 0.02rem;
+	margin-top: 0.05rem;
+}
+
+.shopkeeper .shop-title .title {
+	margin-left: 0.1rem;
+}
+
 .shopkeeper .shop-bg {
 	width: 100%;
 	height: 2.76rem;
@@ -3970,22 +3992,218 @@ footer {
 	height: 3.36rem;
 	margin: 0 auto;
 	margin-top: -1.32rem;
-	background: #eeeeee;
+	margin-bottom: 0.6rem;
+	background: url('../img/bg-path-2x.png') no-repeat;
+	background-size: cover;
+}
+
+.shopkeeper .shop-card .p1 {
+	height: 0.96rem;
+	display: flex;
+	padding: 0.3rem;
+}
+
+.shopkeeper .shop-card .p1 .face {
+	overflow: hidden;
+}
+
+.shopkeeper .shop-card .p1 .face img {
+	width: 0.96rem;
+	height: 0.96rem;
+}
+
+.shopkeeper .shop-card .p1 .info {
+	margin-left: 0.2rem;
+	width: 75%;
+}
+
+.shopkeeper .shop-card .p1 .info .name {
+	display: flex;
+	margin-top: 0.06rem;
+}
+
+.shopkeeper .shop-card .p1 .info .name .sub-name {
+	font-size: 0.32rem;
+	font-weight: 500;
+	color: #FFFFFF;
+}
+
+.shopkeeper .shop-card .p1 .info .name .sub-tag {
+	font-size: 0.2rem;
+	font-weight: 400;
+	color: #FFDDB0;
+	width: 1rem;
+	height: 0.3rem;
+	border-radius: 0.04rem;
+	border: 0.02rem solid #FFDDB0;
+	margin-left: 0.2rem;
+	padding: 0 0.1rem;
+	text-align: center;
+}
+
+.shopkeeper .shop-card .p1 .info .map {
+	display: flex;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #FFFFFF;
+	height: 0.34rem;
+	line-height: 0.34rem;
+	margin-top: 0.06rem;
+}
+
+.shopkeeper .shop-card .p1 .info .map .icon-map {
+	background: url('../img/icon-map2-2x.png') no-repeat;
+	background-size: cover;
+	width: 0.24rem;
+	height: 0.28rem;
+}
+
+.shopkeeper .shop-card .p1 .info .map .icon-address {
+	margin-left: 0.16rem;
+	margin-top: -0.02rem;
+}
+
+.shopkeeper .shop-card .p1 .info .map .icon-id {
+	margin-left: 0.4rem;
+	margin-top: -0.02rem;
+}
+
+.shopkeeper .shop-card .p1 .attention {
+	position: absolute;
+	right: 0.5rem;
+	margin-top: 0.06rem;
+}
+
+.shopkeeper .shop-card .p1 .attention img {
+	width: 1.28rem;
+	height: 0.56rem;
+}
+
+.shopkeeper .shop-card .p2 {
+	height: 0.64rem;
+	display: flex;
+	padding: 0 0.3rem;
+}
+
+.shopkeeper .shop-card .p2 .txt {
+	height: 0.28rem;
+	font-size: 0.2rem;
+	font-weight: 400;
+	color: #FFDDB0;
+	line-height: 0.28rem;
+}
+
+.shopkeeper .shop-card .p2 .val {
+	height: 0.38rem;
+	font-size: 0.32rem;
+	font-weight: bold;
+	color: #fff;
+	line-height: 0.38rem;
+}
+
+.shopkeeper .shop-card .p2 .gz {
+	width: 10%;
+}
+
+.shopkeeper .shop-card .p2 .fs {
+	text-align: center;
+	width: 25%;
+}
+
+.shopkeeper .shop-card .p2 .state {
+	height: 0.34rem;
+	font-size: 0.24rem;
+	font-weight: 500;
+	color: #C09661;
+	line-height: 0.34rem;
+	display: flex;
+	position: absolute;
+	right: 0.62rem;
+}
+
+.shopkeeper .shop-card .p2 .state .icon-state {
+	width: 1.16rem;
+	height: 0.44rem;
+	font-size: 0.24rem;
+	font-weight: 500;
+	color: #C09661;
+	background: url('../img/icon-rectangle-2x.png') no-repeat;
+	background-size: contain;
+	line-height: 0.46rem;
+	display: flex;
+}
+
+.shopkeeper .shop-card .p2 .state .icon-state .r {
+	width: 0.12rem;
+	height: 0.12rem;
+	background: #D8B485;
+	border-radius: 50%;
+	margin-left: 0.14rem;
+	margin-top: 0.16rem;
+}
+
+.shopkeeper .shop-card .p2 .state .icon-state .t {
+	margin-left: 0.1rem;
+}
+
+.shopkeeper .shop-card .p2 .state .icon-stateText {
+	height: 0.44rem;
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #E1E1E1;
+	line-height: 0.46rem;
+	width: 1.2rem;
+	background: #000000;
+	border-radius: 0 0.04rem 0.04rem 0;
+	opacity: 0.3;
+	padding-left: 0.07rem;
+}
+
+.shopkeeper .shop-card .p3 {
+	height: 0.34rem;
+	line-height: 0.34rem;
+	padding: 0 0 0 0.3rem;
+	margin-top: 0.3rem;
+}
+
+.shopkeeper .shop-card .p3 .txt {
+	font-size: 0.24rem;
+	font-weight: 400;
+	color: #F5E8B1;
+	text-shadow: 0 0.04rem 0.02rem #C09F50;
+}
+
+.shopkeeper .shop-card .p3 .qm {
+	width: 1.2rem;
+	height: 0.4rem;
+	position: absolute;
+	right: 0.6rem;
+	margin-top: -0.4rem;
+}
+
+.shopkeeper .shop-mask {
+	width: 5.94rem;
+	height: 3.36rem;
+	margin: 0 auto;
+	margin-top: -3.84rem;
+	margin-bottom: 0.6rem;
+	background: url('../img/bg-mask-2x.png') no-repeat;
+	background-size: cover;
 }
 
 .shopkeeper .shop-list {
-	margin: 0 auto;
+	margin: 0.4rem auto;
 	width: 94%;
+	height: 1.44rem;
 }
 
-.shopkeeper .shop-list ul {
-	margin-top: 0.4rem;
-}
+.shopkeeper .shop-list ul {}
 
 .shopkeeper .shop-list ul li {
 	width: 1.38rem;
 	float: left;
 	text-align: center;
+	height: 1.44rem;
 }
 
 .shopkeeper .shop-list ul li img {
@@ -4002,40 +4220,40 @@ footer {
 	margin-top: 0.16rem;
 }
 
-.shopkeeper .say-list {}
-
-.shopkeeper .say-list ul {}
-
-.shopkeeper .say-list ul li {}
-
-.shopkeeper .say-list ul li .say-panel {
-	padding: 0.3rem;
+.shopkeeper .say-list {
+	margin-top: 0.32rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .face {
+.shopkeeper .say-list .say-panel {
+	margin: 0.53rem 0.3rem 0 0.3rem;
+	border-bottom: 0.01rem solid #EEEEEE;
+	padding-bottom: 0.4rem;
+}
+
+.shopkeeper .say-list .say-panel .face {
 	width: 100%;
 	display: flex;
 	height: 0.68rem;
 	line-height: 0.68rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .face .img {
+.shopkeeper .say-list .say-panel .face .img {
 	width: 13%;
 }
 
-.shopkeeper .say-list ul li .say-panel .face .img img {
+.shopkeeper .say-list .say-panel .face .img img {
 	width: 0.68rem;
 	height: 0.68rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .face .name {
+.shopkeeper .say-list .say-panel .face .name {
 	width: 87%;
 	font-size: 0.28rem;
 	font-weight: 400;
 	color: #1A1A1A;
 }
 
-.shopkeeper .say-list ul li .say-panel .say {
+.shopkeeper .say-list .say-panel .say {
 	height: 0.8rem;
 	font-size: 0.28rem;
 	font-weight: 300;
@@ -4043,18 +4261,23 @@ footer {
 	margin-top: 0.2rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .imglist {}
+.shopkeeper .say-list .say-panel .imglist {}
 
-.shopkeeper .say-list ul li .say-panel .imglist ul {}
+.shopkeeper .say-list .say-panel .imglist ul {}
 
-.shopkeeper .say-list ul li .say-panel .imglist ul li {
+.shopkeeper .say-list .say-panel .imglist ul li {
 	width: 2.2rem;
 	float: left;
 }
 
-.shopkeeper .say-list ul li .say-panel .videolist {}
+.shopkeeper .say-list .say-panel .videolist {
+	height: 3.5rem;
+	background: #000000;
+	border-radius: 0.04rem;
+	overflow: hidden;
+}
 
-.shopkeeper .say-list ul li .say-panel .product {
+.shopkeeper .say-list .say-panel .product {
 	display: flex;
 	height: 1.3rem;
 	background: #FBFCFB;
@@ -4062,22 +4285,22 @@ footer {
 	margin-top: 0.3rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .product .img {
+.shopkeeper .say-list .say-panel .product .img {
 	width: 20%;
 }
 
-.shopkeeper .say-list ul li .say-panel .product .img img {
+.shopkeeper .say-list .say-panel .product .img img {
 	width: 1.3rem;
 	height: 1.3rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .product .info {
+.shopkeeper .say-list .say-panel .product .info {
 	width: 80%;
 	padding: 0.02rem;
 	margin-left: 0.2rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .product .info .title {
+.shopkeeper .say-list .say-panel .product .info .title {
 	height: 0.82rem;
 	font-size: 0.28rem;
 	font-weight: 300;
@@ -4085,14 +4308,14 @@ footer {
 	line-height: 0.4rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .product .info .price {
+.shopkeeper .say-list .say-panel .product .info .price {
 	font-size: 0.24rem;
 	font-weight: 600;
 	color: #FF3B30;
 	line-height: 0.34rem;
 }
 
-.shopkeeper .say-list ul li .say-panel .product .info .price span {
+.shopkeeper .say-list .say-panel .product .info .price span {
 	font-size: 0.28rem;
 }
 
