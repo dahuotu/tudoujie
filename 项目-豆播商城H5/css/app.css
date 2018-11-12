@@ -514,11 +514,15 @@ footer {
 	color: #1A1A1A;
 }
 
-.home .tab,
-.comments .tab {
+.home .tab{
 	display: flex;
 	width: 100%;
 	margin-top: 0.25rem;
+}
+.comments .tab {
+	display: flex;
+	width: 100%;
+	margin-top: 1rem;
 }
 
 .comments .tab {
