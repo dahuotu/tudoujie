@@ -92,7 +92,7 @@
 					</div>
 					<div class="discount" v-on:click="selectDiscount('1')">
 						<div class="discount-title">优惠券</div>
-						<div class="discount-value">省<span>¥20</span>元</div>
+						<div class="discount-value">省<span id="sp_1">¥20</span>元</div>
 						<div class="arrow-right"></div>
 					</div>
 					<div class="postage">
@@ -153,9 +153,9 @@
 							</li>
 						</ul>
 					</div>
-					<div class="discount" v-on:click="selectDiscount('1')">
+					<div class="discount" v-on:click="selectDiscount('2')">
 						<div class="discount-title">优惠券</div>
-						<div class="discount-value">省<span>¥20</span>元</div>
+						<div class="discount-value">省<span id="sp_2">¥20</span>元</div>
 						<div class="arrow-right"></div>
 					</div>
 					<div class="postage">
@@ -233,7 +233,7 @@
 					</ul>
 				</div>
 				<div class="button-foot">
-					<div class="btn-green">确定</div>
+					<div class="btn-green" v-on:click="dialogHide">确定</div>
 				</div>
 			</div>
 			<footer class="shop-car">
@@ -292,6 +292,7 @@
 					console.log(lid);
 					$(".vouchers-dialog ul li .checked").removeClass("checked-ch");
 					$("#li_" + lid + " .checked").addClass("checked-ch");
+					$(".discount #sp_" + lid).text("¥" + lid);
 				},
 			}
 		});
