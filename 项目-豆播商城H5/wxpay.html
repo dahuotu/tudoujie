@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>微信支付测试</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" onclick="history.back()"></div>
+				微信支付测试
+			</header>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+			app.getPayInfo();
+
+		});
+		var app = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				getPayInfo: function() {
+					$.ajax({
+						type: 'get',
+						url: 'http://47.96.29.209:8080/h5/pay/activity/more/charge',
+						data: {
+							uid: '1601',
+							amount: '1',
+							paymentMode: 'wxgzh',
+							platform: 'web',
+							type: '2',
+							receiveUserId: '258605254887305216',
+							extParam: 'aaa'
+						},
+						dataType: "json",
+						success: function(res) {
+							if(res.msg == 'success') {
+								var p = JSON.parse(res.data.payInfo);
+								WeixinJSBridge.invoke(
+									'getBrandWCPayRequest', {
+										"appId": p.appId, //公众号名称，由商户传入     
+										"timeStamp": p.timeStamp, //时间戳，自1970年以来的秒数     
+										"nonceStr": p.nonceStr, //随机串     
+										"package": p.package,
+										"signType": p.signType, //微信签名方式：     
+										"paySign": p.paySign //微信签名 
+									},
+									function(res) {
+										if(res.err_msg == "get_brand_wcpay_request:ok") {
+											//使用以上方式判断前端返回,微信团队郑重提示：
+											//res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+										}
+									});
+							}
+						}
+					});
+				}
+			}
+		});
+	</script>
+
+</html>

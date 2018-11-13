@@ -19,6 +19,7 @@
 		<link rel="Stylesheet" href="css/reset.css" />
 		<link rel="Stylesheet" href="css/app.css" />
 		<script type="text/javascript" src="js/flexible.js"></script>
+		<script class="zhiCustomBtn" id="zhichiScript" src="//www.sobot.com/chat/frame/js/entrance.js?sysNum=708abdcdd7574f9eb6bde7761095c1e0" charset="utf-8"></script>
 		<style type="text/css">
 
 		</style>
@@ -266,7 +267,7 @@
 							<div class="icon-home"></div>
 						</li>
 						<li>
-							<div class="icon-customer"></div>
+							<div class="icon-customer zhiCustomBtn"></div>
 						</li>
 						<li>
 							<div class="icon-like-ch"></div>
@@ -294,11 +295,38 @@
 				}
 			});
 		});
-
-		var app = new Vue({
-			el: '#app',
-			data: {},
-			methods: {}
+		//调用智齿客服
+		var zhiManager = (getzhiSDKInstance());
+		zhiManager.set('anchor', 'true');
+		zhiManager.set("color", '2CB85A');
+		zhiManager.set('title', '土豆街商品咨询');
+		zhiManager.set('userinfo', { //设置用户信息
+			tel: '', //电话或手机
+			email: '', //邮箱
+			uname: '', //昵称
+			visitTitle: '', //对话页标题，若不传入系统将获取用户打开咨询组件时所在页面的标题
+			visitUrl: '', //对话页URL，若不传入系统将获取用户打开咨询组件时所在页面的URL
+			face: '', //头像URL
+			realname: '', //真实姓名
+			weibo: '', //微博账号
+			weixin: '', //微信账号
+			qq: '', //QQ号
+			sex: '', //0 男 1 女
+			birthday: '', //生日，如“1990-01-01”
+			remark: '', //用户的备注信息
+			params: '{"等级":"VIP用户","客户状态":"意向客户"}' //自定义用户信息字段
+		});
+		//通过参数设置H5聊天页面显示商品信息内容
+		zhiManager.set("title_info", "智齿_商品详情页_小智智能"); //必传 需编码
+		zhiManager.set("url_info", "http://www.sobot.com/order/zc.html"); //必传 需编码
+		zhiManager.set("abstract_info", "更精确的理解，更精确地回答，在闲聊寒暄中，拉近与客户的距离，导入知识库，意想不到的方便快捷，最简单的知识添加，事半功倍。"); //需编码
+		zhiManager.set("label_info", "2000"); //需编码
+		zhiManager.set("thumbnail_info", "http://test.sobot.com/console/images/logo_new.png"); //需编码
+		//自定义按钮后可设置该值改变悬浮窗的水平位置
+		zhiManager.set("customMargin", 200);
+		//手动初始化时 通过 load 方法调用 js 组件
+		zhiManager.on("load", function(ret) {
+			zhiManager.initBtnDOM();
 		});
 	</script>
 
