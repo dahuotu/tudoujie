@@ -25,11 +25,11 @@
 	<body>
 		<div id="app">
 			<header class="header-white">
-				<div class="back-gray" onclick="history.back()"></div>
+				<div class="back-gray" v-on:click="linkBack"></div>
 				确认订单
 			</header>
 			<div class="order">
-				<div class="order-address">
+				<div class="order-address" v-on:click="linkAddress">
 					<div class="address-info">
 						<div class="name">
 							<div class="zh-name">张女士</div>
@@ -90,6 +90,11 @@
 							</li>
 						</ul>
 					</div>
+					<div class="discount" v-on:click="selectDiscount('1')">
+						<div class="discount-title">优惠券</div>
+						<div class="discount-value">省<span>¥20</span>元</div>
+						<div class="arrow-right"></div>
+					</div>
 					<div class="postage">
 						<div class="post-title">运费</div>
 						<div class="post-value">包邮</div>
@@ -148,6 +153,11 @@
 							</li>
 						</ul>
 					</div>
+					<div class="discount" v-on:click="selectDiscount('1')">
+						<div class="discount-title">优惠券</div>
+						<div class="discount-value">省<span>¥20</span>元</div>
+						<div class="arrow-right"></div>
+					</div>
 					<div class="postage">
 						<div class="post-title">运费</div>
 						<div class="post-value">包邮</div>
@@ -161,81 +171,18 @@
 					<div class="sum">共2件商品 小计：<span>¥150</span></div>
 					<div class="line"></div>
 				</div>
-				<div class="nav-group">
-					<div class="li">
-						<ul>
-							<li class="face">
-								<img src="upload/t01d7de9ec9fd9ce918.png" class="img-responsive round" />
-							</li>
-							<li class="remark">琳达lala</li>
-							<li class="money">省¥12优惠券</li>
-							<li class="arrow-right"></li>
-						</ul>
-					</div>
-					<div class="li-line"></div>
-					<div class="li">
-						<ul>
-							<li class="face">
-								<img src="upload/face.jpg" class="img-responsive round" />
-							</li>
-							<li class="remark">芒果lala</li>
-							<li class="money">省¥12优惠券</li>
-							<li class="arrow-right"></li>
-						</ul>
-					</div>
-				</div>
 				<div class="line"></div>
-				<div class="panel orderDetail-panel">
-					<div class="price">
-						<ul>
-							<li>
-								<div class="form-title">
-									商品金额
-								</div>
-								<div class="form-value">
-									¥79.8
-								</div>
-							</li>
-							<li>
-								<div class="form-title">
-									运费
-								</div>
-								<div class="form-value">
-									+¥0.00
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="money">
-						<div class="form-title">
-							优惠：
-						</div>
-						<div class="form-value"><span class="ft36">-¥9.8</span></div>
-					</div>
-				</div>
 				<div class="confirm-address hide">
 					广东省深圳市南山高新区后海软件产业基地5栋A座528室
 				</div>
 			</div>
-			<div class="dialog-layer"></div>
-			<div class="dialog vouchers-dialog">
-				<div class="dialog-close"></div>
+			<div class="dialog-layer hide" v-on:click="dialogHide"></div>
+			<div class="dialog vouchers-dialog hide">
+				<div class="dialog-close" v-on:click="dialogHide"></div>
 				<div class="title">优惠券</div>
 				<div class="list">
 					<ul>
-						<li class="li-use">
-							<div class="use">
-								<div class="money">¥<span>40</span></div>
-								<div class="text">满129元可用</div>
-							</div>
-							<div class="remark">
-								<div class="remark-title">多店通用|满129元可用</div>
-								<div class="remark-note">用于：店主昵称的所有店铺</div>
-								<div class="remark-time">2018.10.19-2018.10.31</div>
-							</div>
-							<div class="checked checked-ch"></div>
-						</li>
-						<li>
+						<li id="li_1" class="li-use" v-on:click="vouchersLi(1)">
 							<div class="use">
 								<div class="money">¥<span>40</span></div>
 								<div class="text">满129元可用</div>
@@ -247,15 +194,48 @@
 							</div>
 							<div class="checked"></div>
 						</li>
+						<li id="li_2" class="li-use" v-on:click="vouchersLi(2)">
+							<div class="use">
+								<div class="money">¥<span>20</span></div>
+								<div class="text">满80元可用</div>
+							</div>
+							<div class="remark">
+								<div class="remark-title">多店通用|满80元可用</div>
+								<div class="remark-note">用于：店主昵称的所有店铺</div>
+								<div class="remark-time">2018.10.19-2018.10.31</div>
+							</div>
+							<div class="checked"></div>
+						</li>
+						<li id="li_3">
+							<div class="use">
+								<div class="money">¥<span>40</span></div>
+								<div class="text">满129元可用</div>
+							</div>
+							<div class="remark">
+								<div class="remark-title">多店通用|满129元可用</div>
+								<div class="remark-note">用于：店主昵称的所有店铺</div>
+								<div class="remark-time">2018.10.19-2018.10.31</div>
+							</div>
+							<div class="checked"></div>
+						</li>
+						<li id="li_4" class="li-use" v-on:click="vouchersLi(4)">
+							<div class="use">
+								<div class="money">¥<span>5</span></div>
+								<div class="text">满50元可用</div>
+							</div>
+							<div class="remark">
+								<div class="remark-title">多店通用|满50元可用</div>
+								<div class="remark-note">用于：店主昵称的所有店铺</div>
+								<div class="remark-time">2018.10.19-2018.10.31</div>
+							</div>
+							<div class="checked"></div>
+						</li>
 					</ul>
 				</div>
 				<div class="button-foot">
-					<div class="btn-green">确定</div>				
+					<div class="btn-green">确定</div>
 				</div>
 			</div>
-			<style type="text/css">
-
-			</style>
 			<footer class="shop-car">
 				<div class="gopay">
 					<div class="check-all">
@@ -275,10 +255,10 @@
 			$(window).scroll(function() {
 				if($(window).scrollTop() > 50) {
 					$("header").hide();
-					//$(".confirm-address").fadeIn();
+					$(".confirm-address").fadeIn();
 				} else {
 					$("header").show();
-					//$(".confirm-address").fadeOut();
+					$(".confirm-address").fadeOut();
 				}
 			});
 		});
@@ -286,7 +266,34 @@
 		var app = new Vue({
 			el: '#app',
 			data: {},
-			methods: {}
+			methods: {
+				linkBack: function() {
+					history.back();
+				},
+				linkAddress: function() {
+					location.href = 'address-select.html';
+				},
+				dialogShow: function() {
+					$(".dialog-layer").removeClass("hide");
+					$(".vouchers-dialog").removeClass("hide").addClass("brouce-in");
+					document.documentElement.style.overflowY = 'hidden';
+				},
+				dialogHide: function() {
+					$(".dialog-layer").addClass("hide");
+					$(".vouchers-dialog").addClass("hide").removeClass("brouce-in");
+					document.documentElement.style.overflowY = 'scroll';
+				},
+				selectDiscount: function(did) {
+					//根据ID查询优惠券
+					app.dialogShow();
+				},
+				vouchersLi: function(lid) {
+					//选中优惠券，可以传优惠金额或者优惠券编号
+					console.log(lid);
+					$(".vouchers-dialog ul li .checked").removeClass("checked-ch");
+					$("#li_" + lid + " .checked").addClass("checked-ch");
+				},
+			}
 		});
 	</script>
 
