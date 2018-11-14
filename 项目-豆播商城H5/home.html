@@ -95,7 +95,7 @@
                 	时间：2018-11-08
                 	描述：店主身份进入
                -->
-               <!--
+				<!--
 				<div class="face">
 					<div class="face-shops">
 						<div class="title">Linda第一店铺</div>
@@ -192,7 +192,7 @@
 			<footer class="shop">
 				<div class="class" v-on:click="linkCategory">商品分类</div>
 				<div class="share">分享店铺</div>
-				<div class="customer">
+				<div class="customer" v-on:click="linkCustom">
 					<div class="customer-icon">
 						<div class="customer-img"></div>
 					</div>
@@ -217,7 +217,6 @@
 					$("header").show();
 				}
 			});
-
 		});
 
 		var app = new Vue({
@@ -264,6 +263,9 @@
 				},
 				linkCategory: function() {
 					location.href = 'shop-category.html';
+				},
+				linkCustom: function() {
+					location.href = 'https://www.sobot.com/chat/h5/index.html?sysNum=708abdcdd7574f9eb6bde7761095c1e0';
 				},
 				playVideo: function() {
 					$(".video-wrap").removeClass("hide").addClass("video-full");
