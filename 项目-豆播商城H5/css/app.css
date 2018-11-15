@@ -4693,6 +4693,7 @@ article h2 {
 
 .lightingdeal {
 	margin-top: 1.2rem;
+	margin-bottom:1rem;
 }
 
 .lightingdeal .panel {
@@ -4775,6 +4776,9 @@ article h2 {
 	font-weight: 500;
 	color: rgba(51, 51, 51, 1);
 	width: 75%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .lightingdeal .panel .panel-list ul li .product-info .price-title {
