@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta content="dahuotu" name="author" />
+		<title>订单管理</title>
+		<link rel="Stylesheet" href="css/reset.css" />
+		<link rel="Stylesheet" href="css/app.css" />
+		<script type="text/javascript" src="js/flexible.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<header class="header-white">
+				<div class="back-gray" v-on:click="linkBack"></div>
+				订单管理
+			</header>
+			<div class="order">
+				<div class="tab-round">
+					<ul>
+						<li>
+							<div id="sale" class="btn-r btn-r-active" v-on:click="tabrActive('sale')">销售订单</div>
+						</li>
+						<li>
+							<div id="push" class="btn-r" v-on:click="tabrActive('push')">抽成订单</div>
+						</li>
+					</ul>
+				</div>
+				<!--抽成订单界面开始-->
+				<div class="line-margin hide">
+				</div>
+				<div class="panel orderDetail-panel hide">
+					<div class="shoper">
+						<div class="order-no">
+							2018111201234567
+						</div>
+						<div class="order-state">
+							已完成
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="push-title">
+										<div class="desc">
+											顺丰包邮荔枝 海南三亚妃子笑荔枝新...
+										</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+									</div>
+									<div class="push-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="opp">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="order-state">
+							<span class="ft">共5件商品</span>获得抽成:￥<span>20.0</span>
+						</div>
+					</div>
+				</div>
+				<div class="panel orderDetail-panel hide">
+					<div class="shoper">
+						<div class="order-no">
+							2018111201234567
+						</div>
+						<div class="order-state">
+							已完成
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="push-title">
+										<div class="desc">
+											顺丰包邮荔枝 海南三亚妃子笑荔枝新...
+										</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+									</div>
+									<div class="push-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="opp">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="order-state">
+							<span class="ft">共5件商品</span>获得抽成:￥<span>20.0</span>
+						</div>
+					</div>
+				</div>
+				<!--抽成订单界面结束-->
+				<!--销售订单界面开始-->
+				<div class="tab">
+					<ul>
+						<li class="tab-active">
+							<label class="dot">全部</label>
+						</li>
+						<li>
+							<label class="dot">待付款</label>
+						</li>
+						<li>
+							<label class="dot">待发货</label>
+						</li>
+						<li>
+							<label class="dot">待收货</label>
+						</li>
+						<li>
+							<label class="dot">待评价</label>
+						</li>
+						<li>
+							<label class="dot">售后</label>
+						</li>
+					</ul>
+				</div>
+				<div class="panel orderDetail-panel">
+					<div class="shoper">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="order-state">
+							等待买家付款
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="push-title">
+										<div class="desc">
+											顺丰包邮荔枝 海南三亚妃子笑荔枝新...
+										</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+									</div>
+									<div class="push-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="opp">
+						提成:￥<span>20.0</span> 优惠:￥<span>10.0</span>
+					</div>
+				</div>
+				<div class="panel orderDetail-panel">
+					<div class="shoper">
+						<div class="face">
+							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
+						</div>
+						<div class="shoper-info">
+							Linda的第一店舖
+						</div>
+						<div class="order-state">
+							等待买家付款
+						</div>
+					</div>
+					<div class="product">
+						<ul>
+							<li>
+								<div class="img">
+									<img src="upload/1.jpg" class="img-responsive" />
+								</div>
+								<div class="product-info">
+									<div class="push-title">
+										<div class="desc">
+											顺丰包邮荔枝 海南三亚妃子笑荔枝新...
+										</div>
+										<div class="num">x1</div>
+									</div>
+									<div class="product-title">
+										<div class="attrs">妃子笑500g</div>
+									</div>
+									<div class="push-price">
+										<div class="d-price">¥79.8</div>
+										<div class="opt">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="opp">
+						提成:￥<span>20.0</span> 优惠:￥<span>10.0</span>
+					</div>
+				</div>
+				<div class=""></div>
+				<!--销售订单界面结束-->
+			</div>
+		</div>
+		<style type="text/css">
+
+		</style>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script>
+		$(function() {
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 50) {
+					$("header").hide();
+				} else {
+					$("header").show();
+				}
+			});
+
+		});
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				"saleList": "",
+				"pushList": "",
+			},
+			methods: {
+				getSaleList:function(){
+					//获取销售订单数据
+				},
+				getPushList:function(){
+					//获取抽成订单数据
+				},
+				tabrActive: function(v) {
+					console.log(v);
+					$(".tab-round div").removeClass("btn-r-active");
+					$("#" + v).addClass("btn-r-active");
+				},
+				linkBack: function() {
+					history.back();
+				}
+			},
+		});
+	</script>
+
+</html>
