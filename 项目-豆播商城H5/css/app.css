@@ -96,12 +96,6 @@ footer {
 	background: #fff;
 }
 
-.panel .panel-head {}
-
-.panel .panel-list {
-	padding-left: 0.3rem;
-}
-
 .dialog-layer {
 	background: #2F2E29;
 	opacity: 0.3;
@@ -2638,6 +2632,7 @@ article h2 {
 	/*! padding-top: 0.4rem; */
 }
 
+.lightingdeal .line,
 .order .line {
 	height: 0.2rem;
 	width: 100%;
@@ -4691,6 +4686,115 @@ article h2 {
 	color: #6AC547;
 	margin-bottom: 0.2rem;
 	margin-top: 0.04rem;
+}
+
+
+/*秒杀*/
+
+.lightingdeal {
+	margin-top: 1.2rem;
+}
+
+.lightingdeal .panel {
+	padding: 0;
+	margin-top: 0.2rem;
+}
+
+.lightingdeal .panel .panel-head {
+	height: 0.9rem;
+	background: rgba(255, 255, 255, 1);
+	border-bottom: 0.01rem solid #EEEEEE;
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	line-height: 0.9rem;
+	padding: 0 0.3rem;
+}
+
+.lightingdeal .panel .panel-list {}
+
+.lightingdeal .panel .panel-list ul {
+	margin: 0 0.3rem;
+}
+
+.lightingdeal .panel .panel-list ul li:first-child {
+	display: flex;
+	padding: 0.3rem 0;
+	border-top: none;
+}
+
+.lightingdeal .panel .panel-list ul li {
+	display: flex;
+	padding: 0.3rem 0;
+	border-top: 0.01rem solid #EEEEEE;
+}
+
+.lightingdeal .panel .panel-list ul li .product-img {
+	width: 1.32rem;
+	height: 1.32rem;
+	overflow: hidden;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info {
+	width: 82%;
+	margin-left: 0.12rem;
+	height: 1.32rem;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info .tips {
+	display: flex;
+	width: 100%;
+	height: 0.48rem;
+	line-height: 0.48rem;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info .num {
+	height: 0.38rem;
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.38rem;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info .light {
+	display: flex;
+	height: 0.38rem;
+	font-size: 0.24rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.38rem;
+	margin-top: 0.06rem;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info .title {
+	font-size: 0.34rem;
+	font-family: PingFangSC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+	width: 75%;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info .price-title {
+	width: 75%;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info .price-title span {
+	font-size: 0.28rem;
+	color: #333333;
+}
+
+.lightingdeal .panel .panel-list ul li .product-info .value {
+	width: 25%;
+	height: 0.4rem;
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.4rem;
+	text-align: right;
 }
 
 
