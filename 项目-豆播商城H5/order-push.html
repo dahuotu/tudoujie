@@ -39,9 +39,9 @@
 					</ul>
 				</div>
 				<!--抽成订单界面开始-->
-				<div class="line-margin hide">
+				<div class="line-margin">
 				</div>
-				<div class="panel orderDetail-panel hide">
+				<div class="panel orderDetail-panel">
 					<div class="shoper">
 						<div class="order-no">
 							2018111201234567
@@ -50,28 +50,35 @@
 							已完成
 						</div>
 					</div>
-					<div class="product">
+					<div class="product-img">
 						<ul>
 							<li>
-								<div class="img">
-									<img src="upload/1.jpg" class="img-responsive" />
-								</div>
-								<div class="product-info">
-									<div class="push-title">
-										<div class="desc">
-											顺丰包邮荔枝 海南三亚妃子笑荔枝新...
-										</div>
-										<div class="num">x1</div>
-									</div>
-									<div class="product-title">
-										<div class="attrs">妃子笑500g</div>
-									</div>
-									<div class="push-price">
-										<div class="d-price">¥79.8</div>
-										<div class="opt">
-										</div>
-									</div>
-								</div>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
+							</li>
+							<li>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
+							</li>
+							<li>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
+							</li>
+							<li>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
+							</li>
+							<li>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
+							</li>
+							<li>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
+							</li>
+							<li>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
 							</li>
 						</ul>
 					</div>
@@ -87,7 +94,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="panel orderDetail-panel hide">
+				<div class="panel orderDetail-panel">
 					<div class="shoper">
 						<div class="order-no">
 							2018111201234567
@@ -96,28 +103,11 @@
 							已完成
 						</div>
 					</div>
-					<div class="product">
+					<div class="product-img">
 						<ul>
 							<li>
-								<div class="img">
-									<img src="upload/1.jpg" class="img-responsive" />
-								</div>
-								<div class="product-info">
-									<div class="push-title">
-										<div class="desc">
-											顺丰包邮荔枝 海南三亚妃子笑荔枝新...
-										</div>
-										<div class="num">x1</div>
-									</div>
-									<div class="product-title">
-										<div class="attrs">妃子笑500g</div>
-									</div>
-									<div class="push-price">
-										<div class="d-price">¥79.8</div>
-										<div class="opt">
-										</div>
-									</div>
-								</div>
+								<img src="upload/1.jpg" class="img-responsive" />
+								<div class="desc">3件</div>
 							</li>
 						</ul>
 					</div>
@@ -135,7 +125,7 @@
 				</div>
 				<!--抽成订单界面结束-->
 				<!--销售订单界面开始-->
-				<div class="tab">
+				<div class="tab hide">
 					<ul>
 						<li class="tab-active">
 							<label class="dot">全部</label>
@@ -157,7 +147,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="panel orderDetail-panel">
+				<div class="panel orderDetail-panel hide">
 					<div class="shoper">
 						<div class="face">
 							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
@@ -198,7 +188,7 @@
 						提成:￥<span>20.0</span> 优惠:￥<span>10.0</span>
 					</div>
 				</div>
-				<div class="panel orderDetail-panel">
+				<div class="panel orderDetail-panel hide">
 					<div class="shoper">
 						<div class="face">
 							<img class="img-responsive round" src="upload/t01d7de9ec9fd9ce918.png" />
@@ -268,10 +258,10 @@
 				"pushList": "",
 			},
 			methods: {
-				getSaleList:function(){
+				getSaleList: function() {
 					//获取销售订单数据
 				},
-				getPushList:function(){
+				getPushList: function() {
 					//获取抽成订单数据
 				},
 				tabrActive: function(v) {

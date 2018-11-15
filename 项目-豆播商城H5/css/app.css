@@ -346,11 +346,12 @@ article {
 	padding: 0.2rem;
 }
 
-article h2{
+article h2 {
 	text-align: center;
 	font-size: 0.36rem;
 	margin-top: 0.5rem
 }
+
 
 /*店铺首页相关*/
 
@@ -3167,6 +3168,45 @@ article h2{
 	font-size: 0.24rem;
 	color: #4EAC6D;
 	font-weight: 400;
+}
+
+.order .orderDetail-panel .product-img {
+	border-top: 0.01rem solid #EEEEEE;
+}
+
+.order .orderDetail-panel .product-img ul {
+	width: 100%;
+	display: flex;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.order .orderDetail-panel .product-img ul li:first-child {
+	padding-left: 0;
+}
+
+.order .orderDetail-panel .product-img ul li {
+	padding: 0.4rem 0.1rem;
+	width: 1.5rem;
+}
+
+.order .orderDetail-panel .product-img ul li img {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.order .orderDetail-panel .product-img ul li .desc {
+	height: 0.5rem;
+	background: linear-gradient(0deg, rgba(122, 122, 122, 1) 0%, rgba(26, 26, 26, 0) 100%);
+	opacity: 0.9;
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	text-align: right;
+	margin-top: -0.5rem;
+	line-height: 0.5rem;
+	width: 1.5rem;
 }
 
 .order .orderDetail-panel .product {
