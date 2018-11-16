@@ -18,10 +18,31 @@
 		<title>商品详情</title>
 		<link rel="Stylesheet" href="css/reset.css" />
 		<link rel="Stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" href="css/videojs.min.css">
 		<script type="text/javascript" src="js/flexible.js"></script>
 		<script class="zhiCustomBtn" id="zhichiScript" src="//www.sobot.com/chat/frame/js/entrance.js?sysNum=708abdcdd7574f9eb6bde7761095c1e0" charset="utf-8"></script>
 		<style type="text/css">
-
+			.banner-sp,
+			.banner-dzs {
+				width: 100%;
+				height: 7.5rem;
+				overflow: hidden;
+				position: absolute;
+				transform: translateX(0);
+			}
+			
+			.banner-dzs {
+				left: -100%;
+			}
+			
+			.banner-active {
+				transform: translateX(100%);
+			}
+			
+			.video-js {
+				position: initial;
+			}
 		</style>
 	</head>
 
@@ -33,8 +54,33 @@
 				<div class="nav-badge">11</div>
 			</header>
 			<div class="detail">
+				<div class="video-wrap hide">
+					<div class="play-close" v-on:click="playClose"></div>
+					<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup="{}">
+						<source v-bind:src="videomp4" type="video/mp4">
+					</video>
+				</div>
 				<div class="banner">
-					<img src="upload/4196097.jpg" class="img-responsive abs" />
+					<div class="banner-sp">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" v-for="items in bannerImgs">
+									<a href=""><img :src="items.image" class="img-responsive"></a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="banner-dzs">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" v-for="items in bannerImgs">
+									<a href=""><img :src="items.image" class="img-responsive"></a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
 					<div class="shop-owner">
 						<div class="owner">
 							<div class="div">
@@ -47,15 +93,15 @@
 					</div>
 					<div class="shop-button">
 						<div class="li">
-							<a class="tag">官方实拍</a>
+							<a id="a_sp" class="tag tag-active" v-on:click="selectTag('sp')">官方实拍</a>
 						</div>
 						<div class="li">
-							<a class="tag tag-active">店主说</a>
+							<a id="a_dzs" class="tag" v-on:click="selectTag('dzs')">店主说</a>
 						</div>
 					</div>
 				</div>
 				<div class="process">
-					<div class="pro" style="width:45%;"></div>
+					<div class="pro"></div>
 				</div>
 				<div class="nav-imglist">
 					<ul>
@@ -285,8 +331,13 @@
 	</body>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/vue.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/video.min.js"></script>
+	<script src="js/zh-CN.js"></script>
 	<script>
 		$(function() {
+			app.getBannerImg();
+
 			$(window).scroll(function() {
 				if($(window).scrollTop() > 50) {
 					$("header").hide();
@@ -327,6 +378,74 @@
 		//手动初始化时 通过 load 方法调用 js 组件
 		zhiManager.on("load", function(ret) {
 			zhiManager.initBtnDOM();
+		});
+		//
+		var app = new Vue({
+			el: '#app',
+			data: {
+				"storeId": "1",
+				"bannerImgs": "",
+				"videomp4": "http://vjs.zencdn.net/v/oceans.mp4",
+			},
+			methods: {
+				selectTag: function(tp) {
+					$(".shop-button .tag").removeClass("tag-active");
+					$(".banner-sp,.banner-dzs").removeClass("banner-active");
+					$("#a_" + tp).addClass("tag-active");
+					if(tp == 'sp') {
+						//console.log('sp');
+						$(".banner-sp").removeClass("banner-active");
+						$(".banner-dzs .swiper-container").hide();
+						$(".banner-sp .swiper-container").show();
+					} else {
+						//console.log('dzs');
+						$(".banner-dzs").addClass("banner-active");
+						$(".banner-sp .swiper-container").hide();
+						$(".banner-dzs .swiper-container").show();
+					}
+				},
+				getBannerImg: function() {
+					$.ajax({
+						type: 'get',
+						url: 'http://47.110.164.50/h5/sellerpb/queryBannersByStoreId.do',
+						data: {
+							storeId: app.storeId
+						},
+						dataType: "json",
+						success: function(res) {
+							app.bannerImgs = res.data;
+							app.$nextTick(() => {
+								app.initSwiper();
+							});
+						}
+					})
+				},
+				initSwiper: function() {
+					let mySwiper = new Swiper('.swiper-container', {
+						autoplay: 2000, //可选选项，自动滑动
+						//分页器
+						pagination: '.swiper-pagination',
+						paginationClickable: true,
+						observer: true
+					});
+				},
+				initVideo: function() {
+					var myPlayer = videojs('my-video');
+					videojs("my-video").ready(function() {
+						var myPlayer = this;
+						myPlayer.play();
+						myPlayer.width($("body").width());
+						myPlayer.height($(".video-wrap").height());
+					});
+				},
+				playVideo: function() {
+					$(".video-wrap").removeClass("hide").addClass("video-full");
+					app.initVideo();
+				},
+				playClose: function() {
+					$(".video-wrap").addClass("hide").removeClass("video-full");
+				},
+			},
 		});
 	</script>
 
