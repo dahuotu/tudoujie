@@ -14,19 +14,8 @@ footer {
 	display: flex;
 }
 
-.header-white {
-	background: #fff;
-	height: 1rem;
-	top: 0;
-	color: #1A1A1A;
-	font-size: 0.35rem;
-	font-weight: 500;
-	text-align: center;
-	line-height: 1rem;
-}
-
-.header-shopkeeper .back-white,
-.header-transparent .back-white {
+.header-transparent .back-white,
+.header-shopkeeper .back-white {
 	width: 1rem;
 	height: 1rem;
 	background: url('../img/back-white-2x.png') no-repeat 0.31rem 0.3rem;
@@ -42,16 +31,6 @@ footer {
 	position: absolute;
 	background-size: 45%;
 	width: 1rem;
-}
-
-.header-white .manage {
-	position: absolute;
-	right: 0.05rem;
-	font-size: 0.28rem;
-	color: #1A1A1A;
-	line-height: 0.3rem;
-	margin-top: -0.85rem;
-	padding: 0.25rem;
 }
 
 .header-transparent .nav-buy {
@@ -81,6 +60,27 @@ footer {
 	background-size: 100%;
 }
 
+.header-white {
+	background: #fff;
+	height: 1rem;
+	top: 0;
+	color: #1A1A1A;
+	font-size: 0.35rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1rem;
+}
+
+.header-white .manage {
+	position: absolute;
+	right: 0.05rem;
+	font-size: 0.28rem;
+	color: #1A1A1A;
+	line-height: 0.3rem;
+	margin-top: -0.85rem;
+	padding: 0.25rem;
+}
+
 .header-shopkeeper {
 	color: #fff;
 	background: transparent;
@@ -89,11 +89,6 @@ footer {
 	text-align: center;
 	height: 1rem;
 	line-height: 1rem;
-}
-
-.panel {
-	padding: 0.3rem;
-	background: #fff;
 }
 
 .dialog-layer {
@@ -333,6 +328,14 @@ footer {
 	position: fixed;
 }
 
+.panel {
+	padding: 0.3rem;
+	background: #fff;
+}
+
+
+/*文章类相关*/
+
 article {
 	background: rgba(255, 255, 255, 1);
 	box-shadow: 0 -0.02rem 0.04rem 0 rgba(219, 219, 219, 0.5);
@@ -344,6 +347,24 @@ article h2 {
 	text-align: center;
 	font-size: 0.36rem;
 	margin-top: 0.5rem
+}
+
+.foot-button .btn-save {
+	background: #EEEEEE;
+	height: 0.9rem;
+	font-size: 0.28rem;
+	font-weight: 600;
+	color: #898989;
+	text-align: center;
+	margin: 0.3rem;
+	line-height: 0.9rem;
+	pointer-events: none;
+}
+
+.foot-button .btn-save-green {
+	background: linear-gradient(90deg, rgba(44, 184, 90, 1) 0%, rgba(106, 197, 71, 1) 100%);
+	color: #fff;
+	pointer-events: auto;
 }
 
 
@@ -540,42 +561,6 @@ article h2 {
 	margin-top: 0.25rem;
 }
 
-.comments .tab {
-	display: flex;
-	width: 100%;
-	margin-top: 1rem;
-}
-
-.comments .tab {
-	border-bottom: 0.01rem solid #898989;
-}
-
-.home .tab .tab-li,
-.comments .tab .tab-li {
-	width: 25%;
-	text-align: center;
-	color: #898989;
-	font-size: 0.3rem;
-	height: 1rem;
-	line-height: 1.02rem;
-}
-
-.comments .tab .tab-li .tips {
-	font-size: 0.2rem;
-	height: 0.2rem;
-	position: absolute;
-	line-height: 0.2rem;
-	margin-left: 1.3rem;
-	margin-top: 0.35rem;
-}
-
-.home .tab .tab-li .active,
-.comments .tab .tab-li .active {
-	color: #1A1A1A;
-	border-bottom: 0.08rem solid #01AF66;
-	padding-bottom: 0.25rem;
-}
-
 .home .tab-body {
 	padding: 0;
 	margin: 0;
@@ -667,6 +652,39 @@ article h2 {
 	word-wrap: break-word;
 	word-break: break-all;
 	margin-left: 0.2rem;
+}
+
+.comments .tab {
+	display: flex;
+	width: 100%;
+	margin-top: 1rem;
+	border-bottom: 0.01rem solid #898989;
+}
+
+.comments .tab .tab-li .tips {
+	font-size: 0.2rem;
+	height: 0.2rem;
+	position: absolute;
+	line-height: 0.2rem;
+	margin-left: 1.3rem;
+	margin-top: 0.35rem;
+}
+
+.home .tab .tab-li,
+.comments .tab .tab-li {
+	width: 25%;
+	text-align: center;
+	color: #898989;
+	font-size: 0.3rem;
+	height: 1rem;
+	line-height: 1.02rem;
+}
+
+.home .tab .tab-li .active,
+.comments .tab .tab-li .active {
+	color: #1A1A1A;
+	border-bottom: 0.08rem solid #01AF66;
+	padding-bottom: 0.25rem;
 }
 
 .shop {
@@ -2031,24 +2049,6 @@ article h2 {
 	background: linear-gradient(90deg, rgba(44, 184, 90, 1) 0%, rgba(106, 197, 71, 1) 100%);
 }
 
-.foot-button .btn-save {
-	background: #EEEEEE;
-	height: 0.9rem;
-	font-size: 0.28rem;
-	font-weight: 600;
-	color: #898989;
-	text-align: center;
-	margin: 0.3rem;
-	line-height: 0.9rem;
-	pointer-events: none;
-}
-
-.foot-button .btn-save-green {
-	background: linear-gradient(90deg, rgba(44, 184, 90, 1) 0%, rgba(106, 197, 71, 1) 100%);
-	color: #fff;
-	pointer-events: auto;
-}
-
 .address-dialog {
 	height: 8.85rem;
 	z-index: 3;
@@ -2587,15 +2587,16 @@ article h2 {
 }
 
 .order .confirm-address {
-	background: #EEEEEE;
-	font-size: 0.28rem;
-	font-weight: 400;
-	color: #1A1A1A;
-	padding: 0.22rem 0.3rem;
 	position: fixed;
+	height: 1rem;
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	background: url('../img/line-2x.png') #fff no-repeat top;
+	background-size: contain;
 	bottom: 0.98rem;
-	width: 100%;
-	height: 0.8rem;
+	line-height: 0.4rem;
+	padding: 0.2rem 0.3rem 0 0.3rem;
 }
 
 .order .order-address .address-info {
@@ -2628,9 +2629,7 @@ article h2 {
 	background-size: 0.3rem 0.3rem;
 }
 
-.order .order-panel {
-	/*! padding-top: 0.4rem; */
-}
+.order .order-panel {}
 
 .lightingdeal .line,
 .order .line {
@@ -2715,9 +2714,13 @@ article h2 {
 
 .order .order-panel .list .info .price-num {
 	display: flex;
-	height: 0.3rem;
-	line-height: 0.3rem;
-	margin-top: 0.57rem;
+	height: 0.48rem;
+	font-size: 0.24rem;
+	font-family: DINAlternate-Bold;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 0.28rem;
+	width: 100%;
 }
 
 .order .order-panel .list .info .price-num .price {
@@ -2737,6 +2740,124 @@ article h2 {
 	text-align: right;
 	width: 50%;
 	font-weight: 600;
+}
+
+.order .order-panel .list .bag {
+	background: url('../img/icon-tag-2x.png') #FBFBFB no-repeat top left;
+	border-radius: 0.1rem;
+	margin: 0.2rem 0;
+	background-size: 1rem 0.44rem;
+}
+
+.order .order-panel .list .tag {
+	height: 0.44rem;
+	font-size: 0.24rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	line-height: 0.44rem;
+	text-align: center;
+	width: 1rem;
+}
+
+.order .order-panel .list .bag ul {}
+
+.order .order-panel .list .bag ul li {
+	display: flex;
+	height: 0.88rem;
+	padding: 0.2rem 0.3rem;
+	margin: 0.2rem 0 0 0;
+}
+
+.order .order-panel .list .bag ul li:first-child {
+	margin: 0;
+}
+
+.order .order-panel .list .bag ul li .img {
+	width: 1.28rem;
+	height: 1.28rem;
+	overflow: hidden;
+}
+
+.order .order-panel .list .bag ul li .img img {
+	width: 1.28rem;
+	height: 1.28rem;
+}
+
+.order .order-panel .list .bag ul li .info {
+	width: 75%;
+	margin-left: 0.3rem;
+	height: 1.28rem;
+}
+
+.order .order-panel .list .bag ul li .info .title {
+	display: flex;
+	height: 0.4rem;
+	line-height: 0.4rem;
+}
+
+.order .order-panel .list .bag ul li .info .title .subtitle {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height: 0.4rem;
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	line-height: 0.4rem;
+	width: 80%;
+}
+
+.order .order-panel .list .bag ul li .info .title .num {
+	font-size: 0.28rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	line-height: 0.4rem;
+	height: 0.4rem;
+	width: 20%;
+	text-align: right;
+}
+
+.order .order-panel .list .bag ul li .info .class {
+	height: 0.35rem;
+	font-size: 0.24rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(153, 153, 153, 1);
+	line-height: 0.35rem;
+	margin-top: 0;
+}
+
+.order .order-panel .list .bag ul li .info .price {
+	font-size: 0.24rem;
+	font-family: DINAlternate-Bold;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	margin-top: 0.16rem;
+	color: #B04A46;
+}
+
+.order .order-panel .list .bag ul li .info .price .price {}
+
+.order .order-panel .list .bag ul li .info .price .price span {}
+
+.order .order-panel .list .bag .traffic {
+	height: 0.75rem;
+	border-top: 0.01rem solid #EEEEEE;
+	line-height: 0.75rem;
+	font-size: 0.24rem;
+	font-family: PingFangSC-Regular;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	text-align: right;
+	padding: 0 0.3rem;
+	margin-top: 0.45rem;
+}
+
+.order .order-panel .list .bag .traffic span{	
+	color: #B04A46;
 }
 
 .order .order-panel .discount {
@@ -2831,8 +2952,16 @@ article h2 {
 	margin: 0 0.3rem;
 }
 
+.order .order-panel .sum .ft4 {
+	font-size: 0.4rem;
+}
+
 .order .order-panel .sum span {
 	color: #B04A46;
+}
+
+.order .order-panel .no-border {
+	border-bottom: none;
 }
 
 
@@ -4693,7 +4822,7 @@ article h2 {
 
 .lightingdeal {
 	margin-top: 1.2rem;
-	margin-bottom:1rem;
+	margin-bottom: 1rem;
 }
 
 .lightingdeal .panel {
