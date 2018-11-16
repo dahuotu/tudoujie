@@ -387,7 +387,7 @@ article h2 {
 	overflow: hidden;
 }
 
-.home .video-wrap .play-close {
+.home .video-wrap .play-close,.detail .video-wrap .play-close{
 	background: url('../img/icon-close.png') #fff no-repeat;
 	width: 0.55rem;
 	height: 0.55rem;
@@ -398,7 +398,7 @@ article h2 {
 	z-index: 3;
 }
 
-.home .video-full {
+.home .video-full,.detail .video-full {
 	position: absolute;
 	background: #000;
 	z-index: 3;
