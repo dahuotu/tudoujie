@@ -55,28 +55,23 @@
 				getPayInfo: function() {
 					$.ajax({
 						type: 'get',
-						url: 'http://47.96.29.209:8080/h5/pay/activity/more/charge',
+						url: 'https://devapiejavashop.tudouni.doubozhibo.com/h5/pay/wxpay',
 						data: {
-							uid: '1601',
-							amount: '1',
-							paymentMode: 'wxgzh',
-							platform: 'web',
-							type: '2',
-							receiveUserId: '258605254887305216',
-							extParam: 'aaa'
+							uid: '257849606515945472',
+							orderNo: '18030316040127572593',
+							tradeType: 'JSAPI'
 						},
 						dataType: "json",
 						success: function(res) {
 							if(res.msg == 'success') {
-								var p = JSON.parse(res.data.payInfo);
 								WeixinJSBridge.invoke(
 									'getBrandWCPayRequest', {
-										"appId": p.appId,
-										"timeStamp": p.timeStamp,
-										"nonceStr": p.nonceStr,
-										"package": p.package,
-										"signType": p.signType,
-										"paySign": p.paySign
+										"appId": res.data.appId,
+										"timeStamp": res.data.timeStamp,
+										"nonceStr": res.data.nonceStr,
+										"package": res.data.package,
+										"signType": res.data.signType,
+										"paySign": res.data.paySign
 									},
 									function(res) {
 										if(res.err_msg == "get_brand_wcpay_request:ok") {

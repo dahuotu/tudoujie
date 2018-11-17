@@ -361,6 +361,22 @@ article h2 {
 	pointer-events: none;
 }
 
+.foot-serve{
+	bottom: 0;
+	background: #fff;
+}	
+
+.foot-serve .btn-serve {
+	background: #EEEEEE;
+	height: 0.9rem;
+	font-size: 0.28rem;
+	font-weight: 600;
+	color: #1A1A1A;
+	text-align: center;
+	margin: 0.3rem;
+	line-height: 0.9rem;
+}
+
 .foot-button .btn-save-green {
 	background: linear-gradient(90deg, rgba(44, 184, 90, 1) 0%, rgba(106, 197, 71, 1) 100%);
 	color: #fff;
@@ -3022,11 +3038,22 @@ article h2 {
 	padding-bottom: 0.1rem;
 }
 
+.order .orderDetail-panel .line-smaill{
+  height:0.015rem;
+  background:rgba(238,238,238,1);
+	margin: 0.35rem 0;
+}
+
 .order .padding {
 	padding: 0;
 }
 
 .order .no-border {
+	border-bottom: none;
+}
+
+.order .border{
+	border-top: 0.2rem solid #EEEEEE;
 	border-bottom: none;
 }
 
@@ -3180,6 +3207,24 @@ article h2 {
 	font-size: 0.24rem;
 	margin-top: 0.18rem;
 }
+.order .orderDetail-panel .state .order-serve {
+	width: 80%;
+}
+.order .orderDetail-panel .state .order-serve .title {
+	width: auto;
+	font-size: 0.28rem;
+	font-weight: 600;
+	margin-top: 0.1rem;
+}
+
+.order .orderDetail-panel .state .order-serve .info {
+	font-weight: 400;
+}
+
+.order .orderDetail-panel .state .order-serve .info .msg28 {
+	font-size: 0.28rem;
+	margin-top: 0.15rem;
+}
 
 .order .orderDetail-panel .state .arrow-right {
 	background: url('../img/icon-arrow-right-white.png') no-repeat right;
@@ -3278,6 +3323,15 @@ article h2 {
 	font-weight: 500;
 	background: url('../img/icon-customer-2x.png') no-repeat left;
 	background-size: 25%;
+	text-indent: 0.55rem;
+}
+
+.order .orderDetail-panel .shoper .shoper-price {
+	position: absolute;
+	right: 0.3rem;
+	font-size: 0.32rem;
+	color: #1A1A1A;
+	font-weight: 600;
 	text-indent: 0.55rem;
 }
 
@@ -3423,6 +3477,16 @@ article h2 {
 	height: 0.6rem;
 	line-height: 0.6rem;
 	margin-top: 0.42rem;
+	font-weight: 600;
+	display: flex;
+}
+
+.order .orderDetail-panel .product ul li .product-info .serve-price {
+	color: #1E1E1E;
+	font-size: 0.3rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	margin-top: 0.22rem;
 	font-weight: 600;
 	display: flex;
 }
