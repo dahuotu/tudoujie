@@ -4913,6 +4913,21 @@ article h2 {
 	color: #999999;
 	margin-top: 0.2rem;
 }
+.express .panel ul li .row .content1 {
+	font-size: 0.28rem;
+	font-weight: 400;
+	color: #999999;
+	margin-top: 0.2rem;
+	height: 1.2rem;
+}
+
+.express .panel ul .li-active .row .content1 {
+	height: 1.2rem;
+	font-size: 0.28rem;
+	font-weight: 400;
+	margin-top: 0.2rem;
+	color: #6AC547;
+}
 
 .express .panel ul .li-active .row .content {
 	height: 0.8rem;
@@ -4940,6 +4955,15 @@ article h2 {
 	color: #6AC547;
 	margin-bottom: 0.2rem;
 	margin-top: 0.04rem;
+}
+
+.express .panel .serve li {
+	display: flex;
+	height: 1.98rem;
+}
+
+.express .panel .serve li .line {
+	height: 1.98rem;
 }
 
 
