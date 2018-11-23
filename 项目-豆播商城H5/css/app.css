@@ -1,5 +1,15 @@
-/*通用组件相关*/
 
+.nodate{
+	background: #fff;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	display: -webkit-flex;
+	font-size: 0.3rem;
+	width: 100%;
+	height: 7.5rem;
+}
+/*通用组件相关*/
 header,
 footer {
 	position: fixed;
@@ -348,6 +358,11 @@ article h2 {
 	font-size: 0.36rem;
 	margin-top: 0.5rem
 }
+article img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
 
 .foot-button .btn-save {
 	background: #EEEEEE;
@@ -361,10 +376,10 @@ article h2 {
 	pointer-events: none;
 }
 
-.foot-serve{
+.foot-serve {
 	bottom: 0;
 	background: #fff;
-}	
+}
 
 .foot-serve .btn-serve {
 	background: #EEEEEE;
@@ -417,7 +432,7 @@ article h2 {
 
 .home .video-full,
 .detail .video-full {
-	position: absolute;
+	position: fixed;
 	background: #000;
 	z-index: 3;
 	top: 0;
@@ -1843,7 +1858,10 @@ article h2 {
 
 .address .address-list li .address-info {
 	margin-left: 0.15rem;
-	width: 70%;
+	width: 75%;
+}
+.address .address-list li .appset {
+	width: 85%;
 }
 
 .address .address-list li .address-info .name,
@@ -3038,9 +3056,9 @@ article h2 {
 	padding-bottom: 0.1rem;
 }
 
-.order .orderDetail-panel .line-smaill{
-  height:0.015rem;
-  background:rgba(238,238,238,1);
+.order .orderDetail-panel .line-smaill {
+	height: 0.015rem;
+	background: rgba(238, 238, 238, 1);
 	margin: 0.35rem 0;
 }
 
@@ -3052,7 +3070,7 @@ article h2 {
 	border-bottom: none;
 }
 
-.order .border{
+.order .border {
 	border-top: 0.2rem solid #EEEEEE;
 	border-bottom: none;
 }
@@ -3207,9 +3225,11 @@ article h2 {
 	font-size: 0.24rem;
 	margin-top: 0.18rem;
 }
+
 .order .orderDetail-panel .state .order-serve {
 	width: 80%;
 }
+
 .order .orderDetail-panel .state .order-serve .title {
 	width: auto;
 	font-size: 0.28rem;
@@ -4173,7 +4193,7 @@ article h2 {
 	height: 0.48rem;
 	border-radius: 0.24rem;
 	border: 0.02rem solid #6AC547;
-	width: 0.98rem;
+	width: 1.48rem;
 	text-align: center;
 	line-height: 0.48rem;
 	color: #6AC547;
@@ -4698,6 +4718,7 @@ article h2 {
 .shopkeeper .shop-list ul li img {
 	width: 0.88rem;
 	margin: 0 auto;
+	height: 0.88rem;
 }
 
 .shopkeeper .shop-list ul li span {
@@ -4812,12 +4833,12 @@ article h2 {
 
 .express .panel {
 	display: flex;
-	/*! height: 1.84rem; */
+	height: 1.84rem;
 	background: #FFFFFF;
 	font-size: 0.28rem;
 	font-weight: 400;
 	color: #333333;
-	padding: 0;
+	padding: 0.2rem 0 0 0;
 }
 
 .express .panel .img {
@@ -4913,6 +4934,7 @@ article h2 {
 	color: #999999;
 	margin-top: 0.2rem;
 }
+
 .express .panel ul li .row .content1 {
 	font-size: 0.28rem;
 	font-weight: 400;

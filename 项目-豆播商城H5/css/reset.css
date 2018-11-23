@@ -1,3 +1,7 @@
+[v-cloak] {
+	display: none
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -79,8 +83,7 @@ input[type="submit"] {
 	height: auto;
 }
 
-.video-responsive
-{
+.video-responsive {
 	width: 100%;
 	height: 6.2rem;
 }
